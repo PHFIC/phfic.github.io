@@ -1,27 +1,23 @@
-# Next.js with react-bootstrap example
+# PHFIC Website
+![version](https://img.shields.io/github/package-json/v/phfic/phfic.github.io)
 
-This example shows how to use Next.js along with [react-bootstrap](https://react-bootstrap.github.io/).
+<https://phfic.github.io>
 
-## Deploy your own
+## Dependencies
+ - nodejs
+ - npm
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-react-bootstrap)
+## Developer Quickstart
+ 1. `git clone <repo url>`
+ 2. `cd phfic.github.io`
+ 3. `npm install`
+ 4. `npm run dev`
+ 5. Go to <http://localhost:3000/>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-react-bootstrap&project-name=with-react-bootstrap&repository-name=with-react-bootstrap)
+## Developer Documentation
+ - [nextjs](https://nextjs.org/docs/getting-started) for config, file structure, devops
+ - [react-bootstrap](https://react-bootstrap.github.io/) for some prebuilt JavaScript components
+ - [react](https://reactjs.org/docs/getting-started.html) for building new components
+ - [bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/) for css classes & styling
+ - [mdn](https://developer.mozilla.org/en-US/) for low-level code and core web infrastructure
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-react-bootstrap with-react-bootstrap-app
-```
-
-```bash
-yarn create next-app --example with-react-bootstrap with-react-bootstrap-app
-```
-
-```bash
-pnpm create next-app --example with-react-bootstrap with-react-bootstrap-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
