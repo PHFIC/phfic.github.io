@@ -1,5 +1,5 @@
 # PHFIC Website
-![version](https://img.shields.io/github/package-json/v/phfic/phfic.github.io)
+![version 0.1.0-beta1](https://img.shields.io/badge/version-0.1.0--beta1-orange)
 
 <https://phfic.github.io>
 
