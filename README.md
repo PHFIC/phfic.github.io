@@ -1,5 +1,7 @@
 # PHFIC Website
-![version 0.1.0-beta1](https://img.shields.io/badge/version-0.1.0--beta1-orange)
+![Build Status](https://img.shields.io/github/workflow/status/phfic/phfic.github.io/deploy/main)
+![GitHub Pages Status](https://img.shields.io/github/deployments/phfic/phfic.github.io/github-pages?color=blue&label=pages)
+![Release Status](https://img.shields.io/badge/release-draft-red)
 
 <https://phfic.github.io>
 
