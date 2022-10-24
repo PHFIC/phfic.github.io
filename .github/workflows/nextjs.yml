@@ -105,4 +105,4 @@ jobs:
         node-version: "18"
         cache: 'npm'
     - run: npm ci
-    - run: npm test-integration
+    - run: npm run test-integration
