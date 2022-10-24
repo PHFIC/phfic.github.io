@@ -39,3 +39,4 @@ next-env.d.ts
 /logs
 /screens
 /tests_output
+_selenium-server.log
