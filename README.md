@@ -32,7 +32,7 @@ This is a ReactJS app that uses the NextJS framework to compile into a bundle of
 #### Testing
 Run `npm run lint` to run eslint and sanity-check your code.
 
-Run `npm run test-unit` to run component tests with [jest](https://jestjs.io/docs/getting-started). **TODO still configuring**
+Run `npm run test-unit` to run component tests with [jest](https://jestjs.io/docs/getting-started).
 
 Run `npm run test-chrome` to launch an automated end-to-end integration test. This uses the [nightwatch](https://nightwatchjs.org/guide/overview/what-is-nightwatch.html) framework to mimic human-using-browser interaction we program into the _tests/integration/_ folder. A test summary will be saved in your local _tests\_output/_ folder.
 
