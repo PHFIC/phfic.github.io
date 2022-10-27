@@ -1,76 +1,16 @@
-import Head from 'next/head'
-import { Container, Row, Card, Button } from 'react-bootstrap'
 import Title from '../components/title'
+import Section from '../components/section'
+import Alert from 'react-bootstrap/Alert'
+import WorkInProgress from '../components/work_in_progress'
 
 export default function Calendar() {
   return (
-    <>
-      <Title prefix="Calendar" />
-      <Container>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-        <p>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-        <Container>
-          <Row className="justify-content-md-between">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Documentation</Card.Title>
-                <Card.Text>
-                  Find in-depth information about Next.js features and API.
-                </Card.Text>
-                <Button variant="primary" href="https://nextjs.org/docs">
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Learn</Card.Title>
-                <Card.Text>
-                  Learn about Next.js in an interactive course with quizzes!
-                </Card.Text>
-                <Button variant="primary" href="https://nextjs.org/learn">
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-          </Row>
-          <Row className="justify-content-md-between">
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Examples</Card.Title>
-                <Card.Text>
-                  Discover and deploy boilerplate example Next.js projects.
-                </Card.Text>
-                <Button
-                  variant="primary"
-                  href="https://github.com/vercel/next.js/tree/canary/examples"
-                >
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-            <Card className="sml-card">
-              <Card.Body>
-                <Card.Title>Deploy</Card.Title>
-                <Card.Text>
-                  Instantly deploy your Next.js site to a public URL with
-                  Vercel.
-                </Card.Text>
-                <Button
-                  variant="primary"
-                  href="https://vercel.com/new?utm_source=github&utm_medium=example&utm_campaign=next-example"
-                >
-                  More &rarr;
-                </Button>
-              </Card.Body>
-            </Card>
-          </Row>
-        </Container>
-      </Container>
-    </>
+    <Section id="main">
+      <Title prefix="Calendar Work In Progress" />
+
+      <h1 className="text-center w-100 my-3">PHFIC Calendar</h1>
+      
+      <WorkInProgress name="Calendar" />
+    </Section>
   )
 }
