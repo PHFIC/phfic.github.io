@@ -13,6 +13,11 @@ This is the (future) website codebase for the Public Health [FHIR](https://en.wi
  - [NodeJS](https://nodejs.org/en/) v18.x
  - [npm](https://github.com/npm/cli) v8.x (comes with nodejs)
 
+Major library versions (handled by npm, but you should be aware)
+ - NextJS v12
+ - ReactJS v18.2
+ - Bootstrap v5.2
+
 ## Developer Quickstart
  1. `git clone git@github.com:PHFIC/phfic.github.io.git`
  2. `cd phfic.github.io`
