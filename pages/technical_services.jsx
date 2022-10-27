@@ -6,11 +6,11 @@ import WorkInProgress from '../components/work_in_progress'
 export default function Calendar() {
   return (
     <Section id="main">
-      <Title prefix="Calendar" />
+      <Title prefix="Technical Services" />
 
-      <h1 className="text-center w-100 my-3">PHFIC Calendar</h1>
+      <h1 className="text-center w-100 my-3">PHFIC Technical Services</h1>
       
-      <WorkInProgress name="Calendar Page WIP" />
+      <WorkInProgress name="Technical Services Page WIP" />
     </Section>
   )
 }
