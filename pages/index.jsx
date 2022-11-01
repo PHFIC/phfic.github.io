@@ -10,7 +10,7 @@ export default function Home() {
 
       <Section id="landing">
         <h1 className="text-center w-100 my-5 my-md-3">
-            Public Health FHIR Implementation Collaborative
+            Public Health FHIR&reg; Implementation Collaborative
         </h1>
       </Section>
     </div>

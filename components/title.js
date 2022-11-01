@@ -20,7 +20,7 @@ export default function Title(props) {
   }
   else {
     /* adding key='title' will tell NextJS to only render the last instance of <title> */
-    return <Head><title key="title">{props.prefix + " | Public Health FHIR&reg; Implementation Collaborative"}</title></Head>
+    return <Head><title key="title">{props.prefix + " | Public Health FHIR® Implementation Collaborative"}</title></Head>
   }
 }
 
