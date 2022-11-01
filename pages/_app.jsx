@@ -1,7 +1,7 @@
 // pages/_app.js
 
 import Layout from '../components/layout'
-import '../style/index.css'
+import '../style/index.scss'
 
 export default function MyApp({ Component, pageProps }) {
   return (
