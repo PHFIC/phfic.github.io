@@ -11,10 +11,8 @@ export default function Resources() {
 
         <h1 className="text-center w-100 my-3">PHFIC Resources</h1>
       
-        <WorkInProgress name="Resources - WIP" />
+        <WorkInProgress name="Resources Page - WIP" />
       </Section>
-
-      <Section id="technical-services"></Section>
 
       <Section id="resource-center"></Section>
 

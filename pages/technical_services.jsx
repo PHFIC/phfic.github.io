@@ -3,7 +3,7 @@ import Section from '../components/section'
 import Alert from 'react-bootstrap/Alert'
 import WorkInProgress from '../components/work_in_progress'
 
-export default function Calendar() {
+export default function TechnicalServices() {
   return (
     <Section id="main">
       <Title prefix="Technical Services" />
