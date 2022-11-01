@@ -1,5 +1,6 @@
 // components/navbar.js
 import {Nav, Navbar as BootstrapNavbar, NavDropdown, Container} from 'react-bootstrap'
+import CustomNavDropdown from './nav_dropdown'
 
 /* Navbar structure:
  * -----------------
@@ -28,7 +29,15 @@ export default function Navbar({ children }) {
    * returns: Bootstrap 5 Dropdown
    */
   function dropdownGenerator(title, links) {
-
+    return(
+        <NavDropdown title={title} bg="primary" menuVariant="dark" id="about-dropdown">
+          <NavDropdown.Item href="/index#about">About PHFIC</NavDropdown.Item>
+          <NavDropdown.Item href="/index#vision">Vision</NavDropdown.Item>
+          <NavDropdown.Item href="/index#collaborative-structure">Collaborative Structure</NavDropdown.Item>
+          <NavDropdown.Item href="/index#spotlight">Spotlight</NavDropdown.Item>
+          <NavDropdown.Item href="/index#pilot-site-map">Pilot Site Map</NavDropdown.Item>
+        </NavDropdown>
+    )
   }
 
   return (
@@ -50,13 +59,15 @@ export default function Navbar({ children }) {
 
         <BootstrapNavbar.Toggle aria-controls="navbar-nav" />
         <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
-          <Nav className="ms-auto fs-4">
+          <Nav className="ms-auto fs-4" fill="true">
 
             {/* Home/Index */}
             <Nav.Link href="/">Home</Nav.Link>
 
+            <CustomNavDropdown />
+
             {/* About Dropdown */}
-            <NavDropdown title="About Our Community" bg="primary" id="about-dropdown">
+            <NavDropdown title="About Our Community" bg="primary" menuVariant="dark" id="about-dropdown">
               <NavDropdown.Item href="/index#about">About PHFIC</NavDropdown.Item>
               <NavDropdown.Item href="/index#vision">Vision</NavDropdown.Item>
               <NavDropdown.Item href="/index#collaborative-structure">Collaborative Structure</NavDropdown.Item>
