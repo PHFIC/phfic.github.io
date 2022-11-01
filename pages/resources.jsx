@@ -5,12 +5,22 @@ import WorkInProgress from '../components/work_in_progress'
 
 export default function Resources() {
   return (
-    <Section id="main">
-      <Title prefix="Resources" />
+    <div style={{minHeight: "90vh"}}>
+      <Section id="main">
+        <Title prefix="Resources" />
 
-      <h1 className="text-center w-100 my-3">PHFIC Resources</h1>
+        <h1 className="text-center w-100 my-3">PHFIC Resources</h1>
       
-      <WorkInProgress name="Resources - WIP" />
-    </Section>
+        <WorkInProgress name="Resources - WIP" />
+      </Section>
+
+      <Section id="technical-services"></Section>
+
+      <Section id="resource-center"></Section>
+
+      <Section id="fhir-map"></Section>
+
+      <Section id="trainings"></Section>
+    </div>
   )
 }

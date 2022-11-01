@@ -13,6 +13,16 @@ export default function Home() {
             Public Health FHIR&reg; Implementation Collaborative
         </h1>
       </Section>
+
+      </Section id="about"></Section>
+
+      </Section id="vision"></Section>
+
+      </Section id="collaborative-structure"></Section>
+
+      </Section id="spotlight"></Section>
+
+      </Section id="pilot-site-map"></Section>
     </div>
   )
 }
