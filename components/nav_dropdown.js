@@ -9,12 +9,12 @@ import NavLink from 'react-bootstrap/NavLink';
  *   links: object { string (url) => string (human text) }
  * 
  */
-export default function CustomNavDropdown(props) {
+export default function NavDropdown(props) {
   return (
     <Dropdown as={NavItem}>
       <Dropdown.Toggle as={NavLink}>{props.title}</Dropdown.Toggle>
       <Dropdown.Menu className="bg-primary shadow" variant="dark" align="end">
-        {prop.links.map((link) => <Dropdown.Item as={NavLink} key={link.url} href={link.url}>{link.name}</Dropdown.Item>)}
+        {props.links.map((link) => <Dropdown.Item as={NavLink} key={link.url} href={link.url}>{link.name}</Dropdown.Item>)}
       </Dropdown.Menu>
     </Dropdown>
   );

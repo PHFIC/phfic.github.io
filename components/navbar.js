@@ -1,6 +1,6 @@
 // components/navbar.js
-import {Nav, Navbar as BootstrapNavbar, NavDropdown, Container} from 'react-bootstrap'
-import CustomNavDropdown from './nav_dropdown'
+import {Nav, Navbar as BootstrapNavbar, NavDropdown as BootstrapNavDropdown, Container} from 'react-bootstrap'
+import NavDropdown from './nav_dropdown'
 
 /* Navbar structure:
  * -----------------
@@ -16,29 +16,34 @@ import CustomNavDropdown from './nav_dropdown'
 
 export default function Navbar({ children }) {
 
-  const aboutLinks = {
-    "/index#about": "About PHFIC",
-    "/index#vision": "Vision"
-  }
+  /* website navigation logic */
+  const aboutLinks = [
+    {url: "/index#about", name: "About PHFIC"},
+    {url: "/index#vision", name: "Vision"},
+    {url: "/index#collaborative-structure", name: 'Collaborative Structure'},
+    {url: "/index#spotlight", name: 'Spotlight'},
+    {url: "/index#pilot-site-map", name: 'Pilot Site Map'}
+  ]
 
-  /* dropdownGenerator
-   * 
-   * param title: string (dropdown label)
-   * param links: object { string (url) => string (human text) }
-   *
-   * returns: Bootstrap 5 Dropdown
-   */
-  function dropdownGenerator(title, links) {
-    return(
-        <NavDropdown title={title} bg="primary" menuVariant="dark" id="about-dropdown">
-          <NavDropdown.Item href="/index#about">About PHFIC</NavDropdown.Item>
-          <NavDropdown.Item href="/index#vision">Vision</NavDropdown.Item>
-          <NavDropdown.Item href="/index#collaborative-structure">Collaborative Structure</NavDropdown.Item>
-          <NavDropdown.Item href="/index#spotlight">Spotlight</NavDropdown.Item>
-          <NavDropdown.Item href="/index#pilot-site-map">Pilot Site Map</NavDropdown.Item>
-        </NavDropdown>
-    )
-  }
+  const calendarLinks = [
+    {url: "/calendar#office-hours", name: "Office Hours"},
+    {url: "/calendar#steering-committee", name: "Steering Committee"},
+    {url: "/calendar#cdc-fhir-cop", name: "CDC FHIR Community of Practice"},
+    {url: "/calendar#workshops", name: "Workshops &amp; Trainings"},
+    {url: "/calendar#conferences", name: "Conferences"},
+    {url: "/calendar#meetings", name: "Events/Meetings"},
+    {url: "/calendar#events", name: "Community Events"}
+  ]
+
+  const playbookLinks = [
+    {url: "/playbook", name: "Open Web Version"},
+    /* todo: jump to chapters, use lodash kebabCase */
+    {url: "/playbook/download", name: "Download PDF"}
+  ]
+
+  const joinLinks = [ // TODO
+    {url: "", name: ""}
+  ]
 
   return (
     <>
@@ -61,43 +66,13 @@ export default function Navbar({ children }) {
         <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
           <Nav className="ms-auto fs-4" fill="true">
 
-            {/* Home/Index */}
             <Nav.Link href="/">Home</Nav.Link>
 
-            <CustomNavDropdown />
+            <NavDropdown title="About Our Community" links={aboutLinks} />
 
-            {/* About Dropdown */}
-            <NavDropdown title="About Our Community" bg="primary" menuVariant="dark" id="about-dropdown">
-              <NavDropdown.Item href="/index#about">About PHFIC</NavDropdown.Item>
-              <NavDropdown.Item href="/index#vision">Vision</NavDropdown.Item>
-              <NavDropdown.Item href="/index#collaborative-structure">Collaborative Structure</NavDropdown.Item>
-              <NavDropdown.Item href="/index#spotlight">Spotlight</NavDropdown.Item>
-              <NavDropdown.Item href="/index#pilot-site-map">Pilot Site Map</NavDropdown.Item>
-            </NavDropdown>
+            <NavDropdown title="Playbook" links={playbookLinks} />
 
-            {/* Calendar Dropdown */}
-            <NavDropdown title="Calendar" bg="primary" id="calendar-dropdown">
-              <NavDropdown.Item href="/calendar#office-hours">Office Hours</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#steering-committee">Steering Committee</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#cdc-fhir-cop">CDC FHIR Community of Practice</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#workshops">Workshops &amp; Trainings</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#conferences">Conferences</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#meetings">Events/Meetings</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#events">Community Events</NavDropdown.Item>
-            </NavDropdown>
-
-            {/* Playbook Dropdown */}
-            <NavDropdown title="Playbook" bg="primary" id="playbook-dropdown">
-              <NavDropdown.Item href="/playbook#introduction">Intro</NavDropdown.Item>
-              <NavDropdown.Item href="/playbook#">1</NavDropdown.Item>
-              <NavDropdown.Item href="/playbook#">2</NavDropdown.Item>
-              <NavDropdown.Item href="/playbook#">3</NavDropdown.Item>
-              <NavDropdown.Item href="/playbook#">4</NavDropdown.Item>
-              <NavDropdown.Item href="/playbook#">5</NavDropdown.Item>
-              <NavDropdown.Item href="/playbook#">6</NavDropdown.Item>
-            </NavDropdown>
-
-            {/* Join PHFIC Dropdown */}
+            {/* Join PHFIC Dropdown -- TODO
             <NavDropdown title="Join Us" bg="primary" id="calendar-dropdown">
               <NavDropdown.Item href="/calendar#office-hours">Office Hours</NavDropdown.Item>
               <NavDropdown.Item href="/calendar#steering-committee">Steering Committee</NavDropdown.Item>
@@ -108,7 +83,7 @@ export default function Navbar({ children }) {
               <NavDropdown.Item href="/calendar#events">Community Events</NavDropdown.Item>
             </NavDropdown>
 
-            {/* Resources Dropdown */}
+            {/* Resources Dropdown
             <NavDropdown title="Resources" bg="primary" id="calendar-dropdown">
               <NavDropdown.Item href="/calendar#office-hours">Office Hours</NavDropdown.Item>
               <NavDropdown.Item href="/calendar#steering-committee">Steering Committee</NavDropdown.Item>
@@ -119,7 +94,7 @@ export default function Navbar({ children }) {
               <NavDropdown.Item href="/calendar#events">Community Events</NavDropdown.Item>
             </NavDropdown>
 
-            {/* Quicklinks */}
+            {/* Quicklinks
             <NavDropdown title="Quick Links" bg="primary" id="calendar-dropdown">
               <NavDropdown.Item href="/calendar#office-hours">Office Hours</NavDropdown.Item>
               <NavDropdown.Item href="/calendar#steering-committee">Steering Committee</NavDropdown.Item>
@@ -128,7 +103,7 @@ export default function Navbar({ children }) {
               <NavDropdown.Item href="/calendar#conferences">Conferences</NavDropdown.Item>
               <NavDropdown.Item href="/calendar#meetings">Events/Meetings</NavDropdown.Item>
               <NavDropdown.Item href="/calendar#events">Community Events</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
 
           </Nav>
         </BootstrapNavbar.Collapse>
