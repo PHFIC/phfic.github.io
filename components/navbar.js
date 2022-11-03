@@ -41,8 +41,11 @@ export default function Navbar({ children }) {
     {url: "/playbook/download", name: "Download PDF"}
   ]
 
-  const joinLinks = [ // TODO
-    {url: "", name: ""}
+  const joinLinks = [
+    {url: "/join", name: "Join PHFIC"},
+    {url: "/join#cdc-fhir-cop", name: "Join CDC FHIR Community of Practice"},
+    {url: "/join#subcommittees", name: "Join Subcommittees"},
+    {url: "/join#communicate", name: "Communicate with Community"}
   ]
 
   return (
@@ -72,16 +75,7 @@ export default function Navbar({ children }) {
 
             <NavDropdown title="Playbook" links={playbookLinks} />
 
-            {/* Join PHFIC Dropdown -- TODO
-            <NavDropdown title="Join Us" bg="primary" id="calendar-dropdown">
-              <NavDropdown.Item href="/calendar#office-hours">Office Hours</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#steering-committee">Steering Committee</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#cdc-fhir-cop">CDC FHIR Community of Practice</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#workshops">Workshops &amp; Trainings</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#conferences">Conferences</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#meetings">Events/Meetings</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#events">Community Events</NavDropdown.Item>
-            </NavDropdown>
+            <NavDropdown title="Join Us" links={joinLinks} />
 
             {/* Resources Dropdown
             <NavDropdown title="Resources" bg="primary" id="calendar-dropdown">

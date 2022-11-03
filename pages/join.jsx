@@ -14,8 +14,6 @@ export default function Calendar() {
         <WorkInProgress name="Join PHFIC - WIP" />
       </Section>
 
-      <Section id="phfic"></Section>
-
       <Section id="cdc-fhir-cop"></Section>
 
       <Section id="subcommittees"></Section>
