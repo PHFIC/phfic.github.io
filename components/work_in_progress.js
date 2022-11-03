@@ -5,6 +5,12 @@ import Section from '../components/section'
 import Container from 'react-bootstrap/Container'
 import Alert from 'react-bootstrap/Alert'
 
+/* render a red WIP message
+ *
+ * props:
+ *  name: string - message heading
+ *
+ */
 export default function WorkInProgress(props) {
   return (
     <Container>

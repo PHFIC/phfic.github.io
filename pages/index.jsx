@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Title from '../components/title'
 import Section from '../components/section'
 import { Container, Row, Card, Button } from 'react-bootstrap'
+import WorkInProgress from '../components/work_in_progress'
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
         <h1 className="text-center w-100 my-5 my-md-3">
             Public Health FHIR&reg; Implementation Collaborative
         </h1>
+
+        <WorkInProgress />
       </Section>
 
       <Section id="about"></Section>

@@ -16,6 +16,9 @@ import NavDropdown from './nav_dropdown'
 
 export default function Navbar({ children }) {
 
+  /* north-east arrow for external link symbol */
+  const nearr = String.fromCodePoint(parseInt('02197',16));
+
   /* website navigation logic */
   const aboutLinks = [
     {url: "/index#about", name: "About PHFIC"},
@@ -60,16 +63,16 @@ export default function Navbar({ children }) {
     {url: "/join", name: "Join PHFIC"},
     {url: "mailto:phfic@mitre.org", name: "Email PHFIC"}, /* TODO: trigger modal popup? new page? */
     {url: "/calendar", name: "PHFIC Calendar"},
-    {url: "/404", name: "PHFIC Knowledge Repository"},
+    {url: "/404#1", name: "PHFIC Knowledge Repository"},
     {url: "/resources", name: "PHFIC Technical Services"}, /* TODO: resources vs technical services?? */
     {url: "/resources", name: "PHFIC Resources"},
     {url: "https://www.cdc.gov/csels/phio/it_takes_practice.html", name: "FHIR CoP Newsletter"}, /* TODO: this may not be a simple external link... */
-    {url: "/404", name: "Submit Topic for CoP Newsletter"},
-    {url: "/404", name: "Submit Content for Knowledge Repository"}, /* TODO: Knowledge Repository platform?? */
-    {url: "https://www.cdc.gov/surveillance/pubs-resources/dmi-summary/overview-hl7.html", name: "CDC FHIR"}, /* TODO: correct site? */
-    {url: "https://www.cdcfoundation.org", name: "CDC Foundation"},
-    {url: "https://confluence.hl7.org/display/PH/Helios+FHIR+Accelerator+for+Public+Health+Home", name: "Helios"}, /* NOTE: their confluence page looks better than their main website */
-    {url: "https://https://www.cdc.gov/nchs/nvss/modernization/cop.htm", name: "NVSS FHIR CoP"}
+    {url: "/404#2", name: "Submit Topic for CoP Newsletter"},
+    {url: "/404#3", name: "Submit Content for Knowledge Repository"}, /* TODO: Knowledge Repository platform?? */
+    {url: "https://www.cdc.gov/surveillance/pubs-resources/dmi-summary/overview-hl7.html", name: "CDC FHIR " + nearr}, /* TODO: correct site? */
+    {url: "https://www.cdcfoundation.org", name: "CDC Foundation " + nearr}, /* TODO: have external sites open in new tab */
+    {url: "https://confluence.hl7.org/display/PH/Helios+FHIR+Accelerator+for+Public+Health+Home", name: "Helios " + nearr}, /* NOTE: their confluence page looks better than their main website */
+    {url: "https://www.cdc.gov/nchs/nvss/modernization/cop.htm", name: "NVSS FHIR CoP " + nearr}
   ]
 
   return (
@@ -93,9 +96,11 @@ export default function Navbar({ children }) {
         <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
           <Nav className="ms-auto fs-4" fill="true">
 
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/index#landing">Home</Nav.Link>
 
             <NavDropdown title="About Our Community" links={aboutLinks} />
+
+            <NavDropdown title="Calendar" links={calendarLinks} />
 
             <NavDropdown title="Playbook" links={playbookLinks} />
 
