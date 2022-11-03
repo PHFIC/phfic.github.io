@@ -4,8 +4,8 @@ import NavDropdown from './nav_dropdown'
 
 /* Navbar structure:
  * -----------------
- * home -> /index
- * about (dropdown) -> /index#(section-id)
+ * home -> /
+ * about (dropdown) -> /#(section-id)
  * calendar (dropdown) -> /calendar#(section-id)
  * playbook (dropdown) -> playbook site on external codebase
  * join phfic (dropdown) -> /join#(section-id)
@@ -21,11 +21,11 @@ export default function Navbar({ children }) {
 
   /* website navigation logic */
   const aboutLinks = [
-    {url: "/index#about", name: "About PHFIC"},
-    {url: "/index#vision", name: "Vision"},
-    {url: "/index#collaborative-structure", name: 'Collaborative Structure'},
-    {url: "/index#spotlight", name: 'Spotlight'},
-    {url: "/index#pilot-site-map", name: 'Pilot Site Map'}
+    {url: "/#about", name: "About PHFIC"},
+    {url: "/#vision", name: "Vision"},
+    {url: "/#collaborative-structure", name: 'Collaborative Structure'},
+    {url: "/#spotlight", name: 'Spotlight'},
+    {url: "/#pilot-site-map", name: 'Pilot Site Map'}
   ]
 
   const calendarLinks = [
@@ -81,7 +81,7 @@ export default function Navbar({ children }) {
         <Container fluid>
 
           {/* Logo */}
-          <BootstrapNavbar.Brand className="fs-3" href="/home">
+          <BootstrapNavbar.Brand className="fs-3" href="/">
             <img
               alt=""
               src="/favicon.ico"
@@ -96,7 +96,7 @@ export default function Navbar({ children }) {
         <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
           <Nav className="ms-auto fs-4" fill="true">
 
-            <Nav.Link href="/index#landing">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
 
             <NavDropdown title="About Our Community" links={aboutLinks} />
 
