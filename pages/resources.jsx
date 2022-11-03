@@ -14,7 +14,7 @@ export default function Resources() {
         <WorkInProgress name="Resources Page - WIP" />
       </Section>
 
-      <Section id="resource-center"></Section>
+      <Section id="center"></Section>
 
       <Section id="fhir-map"></Section>
 

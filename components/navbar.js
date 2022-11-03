@@ -37,7 +37,7 @@ export default function Navbar({ children }) {
 
   const playbookLinks = [
     {url: "/playbook", name: "Open Web Version"},
-    /* todo: jump to chapters, use lodash kebabCase */
+    /* TODO: jump to chapters, use lodash kebabCase */
     {url: "/playbook/download", name: "Download PDF"}
   ]
 
@@ -46,6 +46,14 @@ export default function Navbar({ children }) {
     {url: "/join#cdc-fhir-cop", name: "Join CDC FHIR Community of Practice"},
     {url: "/join#subcommittees", name: "Join Subcommittees"},
     {url: "/join#communicate", name: "Communicate with Community"}
+  ]
+
+  const resourceLinks = [
+    {url: "/resources", name: "Technical Services"},
+    /* TODO: technical services as nested dropdown? */
+    {url: "/resources#center", name: "Resource Center"},
+    {url: "/resources#fhir-map", name: "FHIR Map"},
+    {url: "/resources#trainings", name: "Trainings"}
   ]
 
   return (
@@ -77,16 +85,7 @@ export default function Navbar({ children }) {
 
             <NavDropdown title="Join Us" links={joinLinks} />
 
-            {/* Resources Dropdown
-            <NavDropdown title="Resources" bg="primary" id="calendar-dropdown">
-              <NavDropdown.Item href="/calendar#office-hours">Office Hours</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#steering-committee">Steering Committee</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#cdc-fhir-cop">CDC FHIR Community of Practice</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#workshops">Workshops &amp; Trainings</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#conferences">Conferences</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#meetings">Events/Meetings</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#events">Community Events</NavDropdown.Item>
-            </NavDropdown>
+            <NavDropdown title="Resources" links={resourceLinks} />
 
             {/* Quicklinks
             <NavDropdown title="Quick Links" bg="primary" id="calendar-dropdown">
