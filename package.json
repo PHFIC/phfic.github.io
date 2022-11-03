@@ -5,7 +5,6 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "test": "npm run test-unit && npm run test-integration",
     "test-unit": "jest ./tests/unit",
     "test-chrome": "nightwatch --env chrome",
     "test-integration": "nightwatch --env integration"
@@ -15,7 +14,8 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

@@ -61,7 +61,10 @@ module.exports = {
     },
 
     chrome: {
+      launch_url: "http://localhost:3000",
+
       desiredCapabilities: {
+
         browserName: 'chrome',
         'goog:chromeOptions': {
           // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/

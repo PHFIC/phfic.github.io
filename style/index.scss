@@ -1,0 +1,12 @@
+/* index.scss */
+
+/* override color palette */
+$primary: #7253ed;   /* purple */
+$secondary: #052c65; /* dark blue */
+$success: #10ac7d;   /* green */
+$info: #0dcaf0;      /* cyan */
+$warning: #ffc107;   /* yellow */
+$danger: #dc3545;    /* red */
+
+/* ensure all pages have Bootstrap CSS */
+@import '~bootstrap/scss/bootstrap';
