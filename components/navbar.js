@@ -56,6 +56,22 @@ export default function Navbar({ children }) {
     {url: "/resources#trainings", name: "Trainings"}
   ]
 
+  const quickLinks = [
+    {url: "/join", name: "Join PHFIC"},
+    {url: "mailto:phfic@mitre.org", name: "Email PHFIC"}, /* TODO: trigger modal popup? new page? */
+    {url: "/calendar", name: "PHFIC Calendar"},
+    {url: "/404", name: "PHFIC Knowledge Repository"},
+    {url: "/resources", name: "PHFIC Technical Services"}, /* TODO: resources vs technical services?? */
+    {url: "/resources", name: "PHFIC Resources"},
+    {url: "https://www.cdc.gov/csels/phio/it_takes_practice.html", name: "FHIR CoP Newsletter"}, /* TODO: this may not be a simple external link... */
+    {url: "/404", name: "Submit Topic for CoP Newsletter"},
+    {url: "/404", name: "Submit Content for Knowledge Repository"}, /* TODO: Knowledge Repository platform?? */
+    {url: "https://www.cdc.gov/surveillance/pubs-resources/dmi-summary/overview-hl7.html", name: "CDC FHIR"}, /* TODO: correct site? */
+    {url: "https://www.cdcfoundation.org", name: "CDC Foundation"},
+    {url: "https://confluence.hl7.org/display/PH/Helios+FHIR+Accelerator+for+Public+Health+Home", name: "Helios"}, /* NOTE: their confluence page looks better than their main website */
+    {url: "https://https://www.cdc.gov/nchs/nvss/modernization/cop.htm", name: "NVSS FHIR CoP"}
+  ]
+
   return (
     <>
       <BootstrapNavbar expand="xl" bg="primary" variant="dark">
@@ -87,16 +103,7 @@ export default function Navbar({ children }) {
 
             <NavDropdown title="Resources" links={resourceLinks} />
 
-            {/* Quicklinks
-            <NavDropdown title="Quick Links" bg="primary" id="calendar-dropdown">
-              <NavDropdown.Item href="/calendar#office-hours">Office Hours</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#steering-committee">Steering Committee</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#cdc-fhir-cop">CDC FHIR Community of Practice</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#workshops">Workshops &amp; Trainings</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#conferences">Conferences</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#meetings">Events/Meetings</NavDropdown.Item>
-              <NavDropdown.Item href="/calendar#events">Community Events</NavDropdown.Item>
-            </NavDropdown> */}
+            <NavDropdown title="Quick Links" links={quickLinks} />
 
           </Nav>
         </BootstrapNavbar.Collapse>
