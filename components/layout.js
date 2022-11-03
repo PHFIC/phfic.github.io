@@ -6,7 +6,7 @@ import Title from './title'
 
 export default function Layout({ children }) {
   return (
-    <div style={{minHeight: "90vh"}}>
+    <div id="top" style={{minHeight: "90vh"}}>
       {/* Default title if not defined in children */}
       <Title full="Public Health FHIR&reg; Implementation Collaborative" />
 
