@@ -61,8 +61,9 @@ module.exports = {
     },
 
     chrome: {
+      launch_url: "http://localhost:3000",
+
       desiredCapabilities: {
-        launch_url: "http://localhost:3000",
 
         browserName: 'chrome',
         'goog:chromeOptions': {

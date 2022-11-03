@@ -1,5 +1,5 @@
 describe('navigation bar', function() {
-  // browser variable is preloaded with launch_url HTML DOM from nightwatch config
+  before(browser => browser.navigateTo(browser.launch_url))
 
   it('renders', function(browser) {
     browser

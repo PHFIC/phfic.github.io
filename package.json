@@ -5,7 +5,6 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "test": "npm run test-unit && npm run test-integration",
     "test-unit": "jest ./tests/unit",
     "test-chrome": "nightwatch --env chrome",
     "test-integration": "nightwatch --env integration"
