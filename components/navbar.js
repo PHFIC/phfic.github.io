@@ -64,8 +64,8 @@ export default function Navbar({ children }) {
     {url: "mailto:phfic@mitre.org", name: "Email PHFIC"}, /* TODO: trigger modal popup? new page? */
     {url: "/calendar", name: "PHFIC Calendar"},
     {url: "/404#1", name: "PHFIC Knowledge Repository"},
-    {url: "/resources", name: "PHFIC Technical Services"}, /* TODO: resources vs technical services?? */
-    {url: "/resources", name: "PHFIC Resources"},
+    {url: "/resources#1", name: "PHFIC Technical Services"}, /* TODO: resources vs technical services?? */
+    {url: "/resources#2", name: "PHFIC Resources"},
     {url: "https://www.cdc.gov/csels/phio/it_takes_practice.html", name: "FHIR CoP Newsletter"}, /* TODO: this may not be a simple external link... */
     {url: "/404#2", name: "Submit Topic for CoP Newsletter"},
     {url: "/404#3", name: "Submit Content for Knowledge Repository"}, /* TODO: Knowledge Repository platform?? */
@@ -96,7 +96,7 @@ export default function Navbar({ children }) {
         <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
           <Nav className="ms-auto fs-4" fill="true">
 
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link className="text-light" href="/">Home</Nav.Link>
 
             <NavDropdown title="About Our Community" links={aboutLinks} />
 
