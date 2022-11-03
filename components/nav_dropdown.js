@@ -10,28 +10,19 @@ import NavLink from 'react-bootstrap/NavLink';
  * 
  */
 export default function NavDropdown(props) {
-  const [show, setShow] = useState(false);
-  const [enabled, setEnabled] = useState(true);
+  const [bold, setBold] = useState(false);
 
-  const showDropdown = (e) => {
-    if( !show ) {
-        setShow(true);
-        setEnabled(false);
-        setTimeout(() => {
-            setEnabled(true);
-        }, 1000);
-    }
+  const boldenText = (e) => {
+    setBold(true);
   }
 
-  const hideDropdown = (e) => {
-    if( enabled && show ) {
-        setShow(false);
-    }
+  const normalizeText = (e) => {
+    setBold(false);
   }
 
   return (
-    <Dropdown as={NavItem} onMouseOver={showDropdown} onMouseOut={hideDropdown} show={show}>
-      <Dropdown.Toggle as={NavLink} className={show ? "text-light fw-bold" : "text-light"}>{props.title}</Dropdown.Toggle>
+    <Dropdown as={NavItem} onMouseEnter={boldenText} onMouseLeave={normalizeText}>
+      <Dropdown.Toggle as={NavLink} className={bold ? "text-light fw-bold" : "text-light"}>{props.title}</Dropdown.Toggle>
       <Dropdown.Menu className="bg-primary shadow-sm" variant="dark" align="end">
         {props.links.map(function(link, i) {
             if( i+1 < props.links.length ) {
