@@ -25,5 +25,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run test-integration
+        
+    - name: npm-install
+      run: npm ci
+    - run: sudo apt-get install xvfb
+
+    - name: Run Nightwatch tests
+      run: xvfb-run --auto-servernum npm run test-chrome
