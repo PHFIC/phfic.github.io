@@ -111,4 +111,4 @@ jobs:
     - run: sudo apt-get install xvfb
 
     - name: Run Nightwatch tests
-      run: xvfb-run --auto-servernum npm run test-chrome
+      run: xvfb-run --auto-servernum npm run test-integration
