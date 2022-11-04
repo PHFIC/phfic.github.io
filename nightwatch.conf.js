@@ -104,10 +104,19 @@ module.exports = {
             //'--no-sandbox',
             //'--ignore-certificate-errors',
             //'--allow-insecure-localhost',
-            '--headless'
+            //'--headless'
           ]
         }
       },
+
+      webdriver: {
+        start_process: true,
+        server_path: '',
+        cli_args: [
+          // --verbose
+        ]
+      }
+
    }
 
   },
