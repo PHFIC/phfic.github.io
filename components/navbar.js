@@ -32,7 +32,7 @@ export default function Navbar({ children }) {
     {url: "/calendar#office-hours", name: "Office Hours"},
     {url: "/calendar#steering-committee", name: "Steering Committee"},
     {url: "/calendar#cdc-fhir-cop", name: "CDC FHIR Community of Practice"},
-    {url: "/calendar#workshops", name: "Workshops &amp; Trainings"},
+    {url: "/calendar#workshops", name: "Workshops & Trainings"},
     {url: "/calendar#conferences", name: "Conferences"},
     {url: "/calendar#meetings", name: "Events/Meetings"},
     {url: "/calendar#events", name: "Community Events"}
