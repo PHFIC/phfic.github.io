@@ -29,6 +29,7 @@ export default function Navbar({ children }) {
   ]
 
   const calendarLinks = [
+    {url: "/calendar#main", name: "Calendar"},
     {url: "/calendar#office-hours", name: "Office Hours"},
     {url: "/calendar#steering-committee", name: "Steering Committee"},
     {url: "/calendar#cdc-fhir-cop", name: "CDC FHIR Community of Practice"},
@@ -75,6 +76,15 @@ export default function Navbar({ children }) {
     {url: "https://www.cdc.gov/nchs/nvss/modernization/cop.htm", name: "NVSS FHIR CoP " + nearr}
   ]
 
+  /* helper functions */
+  function Bolden(event) {
+    event.target.classList.add('fw-bold');
+  }
+
+  function Unbolden(event) {
+    event.target.classList.remove('fw-bold');
+  }
+
   return (
     <>
       <BootstrapNavbar expand="xl" bg="primary" variant="dark">
@@ -96,7 +106,7 @@ export default function Navbar({ children }) {
         <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
           <Nav className="ms-auto fs-4" fill="true">
 
-            <Nav.Link className="text-light" href="/">Home</Nav.Link>
+            <Nav.Link className="text-light" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>
 
             <NavDropdown title="About Our Community" links={aboutLinks} />
 
