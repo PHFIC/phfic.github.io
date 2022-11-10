@@ -12,7 +12,7 @@ describe('app home page', function() {
     browser
       .waitForElementVisible('body')
       .assert.visible('body')
-      .assert.containsText('body', 'Public Health FHIR® Implementation Collaborative')
+      .assert.textContains('body', 'Public Health FHIR® Implementation Collaborative')
   });
 
   after(browser => browser.end());

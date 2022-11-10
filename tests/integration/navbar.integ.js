@@ -25,7 +25,7 @@ describe('navigation bar', function() {
 
   /* TODO: consider running for all dropdowns instead of just first */
   it('has functional dropdown', function(browser) {
-    const dropdownButtonSelector = '.dropdown-toggle';
+    const dropdownButtonSelector = 'div.dropdown a.dropdown-toggle';
     const dropdownMenuSelector = '.dropdown-menu';
     browser
       .pause(1100)
@@ -37,9 +37,12 @@ describe('navigation bar', function() {
       .pause(1100)
       //.assert.hasClass( dropdownButtonSelector, 'fw-bold', 'dropdown label did not change on hover' )
       .click(dropdownButtonSelector)
+      .pause(1000)
       .assert.visible( dropdownMenuSelector, 'dropdown menu shown after click' )
       //.move({origin: element('footer')})
+      .pause(1000)
       .click('body')
+      .pause(1000)
       .assert.not.visible( dropdownMenuSelector, 'dropdown menu hiden after clicking away')
   });
 
