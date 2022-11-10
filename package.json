@@ -5,6 +5,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
+    "test": "cypress run",
     "cypress": "cypress open"
   },
   "dependencies": {
