@@ -34,6 +34,10 @@ This is a ReactJS app that uses the NextJS framework to compile into a bundle of
  - Define custom components in _components/_. Note [react-bootstrap](https://react-bootstrap.github.io/) already gives you dropdowns, cards, tooltips, modals, and many other common features. NextJS also provides Image and Link.
  - NextJS has a built in image optimizer that we **disabled** to allow it to compile into a pure front-end application.
 
+**NOTE CURRENTLY REDOING TESTING SETUP**
+
+WARNING: CYPRESS DOES NOT SUPPORT NEXTJS V 13 FOR COMPONENT TESTING AS OF 11/10 BUT THEY ARE WORKING ON A PR THAT SHOULD BE IN NEXT UPDATE
+
 #### Testing
 Run `npm run lint` to run eslint and sanity-check your code.
 
