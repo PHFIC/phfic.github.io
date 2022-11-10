@@ -25,19 +25,25 @@ describe('navigation bar', function() {
 
   /* TODO: consider running for all dropdowns instead of just first */
   it('has functional dropdown', function(browser) {
-    const dropdownButtonSelector = '.dropdown-toggle'; // first one
+    const dropdownButtonSelector = 'div.dropdown a.dropdown-toggle';
     const dropdownMenuSelector = '.dropdown-menu';
     browser
-      .assert.visible( dropdownButtonSelector, 'dropdown has no toggle button' )
-      .assert.not.elementPresent( dropdownMenuSelector, 'dropdown is not hiding menu' )
+      .pause(1100)
+      .waitForElementPresent( "css selector", dropdownButtonSelector, 5000) // 'dropdown has no toggle button' )
+      //.waitForElementVisible( dropdownButtonSelector, 30000 )
+      .assert.not.elementPresent( dropdownMenuSelector, 'dropdown is hiding menu' )
       //.assert.elementsCount('nav .dropdown a.dropdown-toggle', 6)
-      //.move({origin: element(dropdownButtonSelector)})
+      //.move({origin: element(dropdownButtonSelector), x: 100, y: 100})
+      .pause(1100)
       //.assert.hasClass( dropdownButtonSelector, 'fw-bold', 'dropdown label did not change on hover' )
       .click(dropdownButtonSelector)
-      .assert.visible( dropdownMenuSelector, 'dropdown menu is not shown after click' )
+      .pause(1000)
+      .assert.visible( dropdownMenuSelector, 'dropdown menu shown after click' )
       //.move({origin: element('footer')})
-      .click('#top')
-      .assert.not.visible( dropdownMenuSelector, 'dropdown menu did not hide after clicking away')
+      .pause(1000)
+      .click('body')
+      .pause(1000)
+      .assert.not.visible( dropdownMenuSelector, 'dropdown menu hiden after clicking away')
   });
 
   after(browser => browser.end());
