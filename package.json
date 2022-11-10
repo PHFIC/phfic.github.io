@@ -23,8 +23,6 @@
     "chromedriver": "^106.0.1",
     "eslint": "8.26.0",
     "eslint-config-next": "12.3.1",
-    "jest": "^29.2.2",
-    "jest-environment-jsdom": "^29.2.2",
-    "nightwatch": "^2.4.1"
+    "jest-environment-jsdom": "^29.2.2"
   }
 }
