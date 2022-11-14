@@ -40,3 +40,10 @@ next-env.d.ts
 /screens
 /tests_output
 _selenium-server.log
+
+# cypress testing
+/cypress/videos
+
+# temp folder
+/tmp
+!/tmp/.keep

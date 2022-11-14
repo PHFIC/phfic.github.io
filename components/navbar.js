@@ -29,7 +29,7 @@ export default function Navbar({ children }) {
   ]
 
   const calendarLinks = [
-    {url: "/calendar#main", name: "Calendar"},
+    {url: "/calendar", name: "Calendar"},
     {url: "/calendar#office-hours", name: "Office Hours"},
     {url: "/calendar#steering-committee", name: "Steering Committee"},
     {url: "/calendar#cdc-fhir-cop", name: "CDC FHIR Community of Practice"},

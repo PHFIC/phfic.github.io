@@ -28,20 +28,64 @@ Major library versions (handled by npm, but you should be aware)
 ## Developer Guide
 This is a ReactJS app that uses the NextJS framework to compile into a bundle of static HTML/CSS/JavaScript pages, that can then be rendered on GitHub Pages. File _pages/\_app.jsx_ is where it all starts.
 
-#### NextJS File Structure & Caveats
+
+#### Directory Structure
+```
+.
++--- README.md
++--- LICENSE
++--- components/         # custom defined React components
+|
++--- cypress/            # files for Cypress testing
+|    +--- support/       # helper code for testing/Cypress
+|    +--- videos/        # Cypress end-to-end testing screen recordings
+|    +--- screenshots/   # Cypress integration testing screenshots
+|
++--- cypress.config.js   # Cypress configuration
++--- next.config.js      # NextJS configuration
++--- node_modules/       # folder for project javascript dependencies
+|
++--- out/                # folder for compiled static-HTML and client-side code
+|
+|--- package.json        # master file for dependencies and npm scripts
+|--- package-lock.json   # frozen master file, generated automatically
+|
++--- pages/              # folder for webpages
+|    +--- _app.jsx       # special NextJS file for webpage layout
+|    +--- *.js(x)        # any other React component here will be rendered as its own webpage
+|    +--- api/           # special NextJS folder for backend code - DO NOT USE
+|
++--- public/             # folder for public assets
+|
++--- style/              # folder for SCSS and CSS files
+|    +--- index.scss     # master style sheet
+|
++--- test/               # folder for test code
+|    +--- integration/   # folder for integration AKA end-2-end tests
+|       +--- *.cy.js(x)  # integration test file
+|    +--- components/    # folder for unit AKA component tests
+|
+|--- test.sh             # bash test script ('npm test' runs this file)
+|--- temp/               # folder for temp files, do not delete folder
+```
+
+
+#### Testing
+
+**WARNING: CYPRESS DOES NOT SUPPORT NEXTJS V 13 FOR COMPONENT TESTING AS OF 11/10 BUT THEY ARE WORKING ON A PR THAT SHOULD BE IN NEXT UPDATE**
+
+Run `npm run lint` to run eslint and sanity-check your code.
+
+Run `npm run test` to run ~~unit and~~ integration tests.
+
+Run `npm run cypress` to launch a (semi-)automatic testing tool gui.
+
+
+#### NextJS Caveats
  - Any file in _pages/_ will automatically have its own endpoint. I.e: _pages/about.jsx_ will route `GET /about` to a React-rendered about page. NextJS uses its own routing distinct from React-Router.
  - Any JS files in _pages/api/_ will become nodejs files for a backend API. However since we are compiling this into a pure front-end app **don't use this feature.**
  - Define custom components in _components/_. Note [react-bootstrap](https://react-bootstrap.github.io/) already gives you dropdowns, cards, tooltips, modals, and many other common features. NextJS also provides Image and Link.
  - NextJS has a built in image optimizer that we **disabled** to allow it to compile into a pure front-end application.
-
-#### Testing
-Run `npm run lint` to run eslint and sanity-check your code.
-
-Run `npm run test-unit` to run component tests with [jest](https://jestjs.io/docs/getting-started).
-
-Run `npm run test-chrome` to launch an automated end-to-end integration test. This uses the [nightwatch](https://nightwatchjs.org/guide/overview/what-is-nightwatch.html) framework to mimic human-using-browser interaction we program into the _tests/integration/_ folder. A test summary will be saved in your local _tests\_output/_ folder.
-
-Run `npm run test` to run **both** unit and integration tests.
 
 
 #### More Documentation
@@ -50,8 +94,7 @@ Run `npm run test` to run **both** unit and integration tests.
  - [react](https://reactjs.org/docs/getting-started.html) for building new components
  - [bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/) for css classes & styling
  - [mdn](https://developer.mozilla.org/en-US/) for low-level code and core web infrastructure
- - [nightwatch](https://nightwatchjs.org/guide/overview/what-is-nightwatch.html) for end-to-end integration testing
- - [jest](https://jestjs.io/docs/getting-started) for unit testing
+ - [cypress](https://docs.cypress.io/guides/getting-started/opening-the-app) for unit and integration testing
 
 
 ## Contributing

@@ -5,9 +5,8 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "test-unit": "jest ./tests/unit",
-    "test-chrome": "nightwatch --env chrome",
-    "test-integration": "nightwatch --env integration"
+    "test": "./test.sh",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
@@ -21,10 +20,9 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "chromedriver": "^106.0.1",
+    "cypress": "^11.0.1",
     "eslint": "8.26.0",
     "eslint-config-next": "12.3.1",
-    "jest": "^29.2.2",
-    "jest-environment-jsdom": "^29.2.2",
-    "nightwatch": "^2.4.1"
+    "jest-environment-jsdom": "^29.2.2"
   }
 }
