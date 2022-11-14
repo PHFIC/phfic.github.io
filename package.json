@@ -5,7 +5,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "test": "next build && next export && next start && parallel 'next start' 'cypress run'",
+    "test": "./test.sh",
     "cypress": "cypress open"
   },
   "dependencies": {
