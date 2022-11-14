@@ -43,3 +43,7 @@ _selenium-server.log
 
 # cypress testing
 /cypress/videos
+
+# temp folder
+/tmp
+!/tmp/.keep

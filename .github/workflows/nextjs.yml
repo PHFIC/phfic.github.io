@@ -92,23 +92,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-  # Integration tests job
-  integration-test:
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js 18
-      uses: actions/setup-node@v3
-      with:
-        node-version: "18"
-        cache: 'npm'
-
-    - name: npm-install
-      run: npm ci
-
-    - run: sudo apt-get install xvfb
-
-    - name: Run Nightwatch tests
-      run: xvfb-run --auto-servernum npm run test-integration
