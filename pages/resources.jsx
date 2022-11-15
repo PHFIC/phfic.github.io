@@ -16,7 +16,10 @@ export default function Resources() {
 
       <Section id="center"></Section>
 
+      {/*
       <Section id="trainings"></Section>
+      */}
+
     </div>
   )
 }

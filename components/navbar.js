@@ -34,9 +34,9 @@ export default function Navbar({ children }) {
   const calendarLinks = [
     {url: "/calendar", name: "Calendar"},
     {url: "/calendar#office-hours", name: "Office Hours"},
-    {url: "/calendar#steering-committee", name: "Steering Committee"},
+    {url: "/calendar#steering-committee", name: "Steering Committee"} //,
     /* {url: "/calendar#cdc-fhir-cop", name: "CDC FHIR Community of Practice"}, */
-    {url: "/calendar#workshops", name: "Workshops & Trainings"} /* , */
+    /* {url: "/calendar#workshops", name: "Workshops & Trainings"}, */
     /* {url: "/calendar#conferences", name: "Conferences"}, */
     /* {url: "/calendar#meetings", name: "Events/Meetings"}, */
     /* {url: "/calendar#events", name: "Community Events"} */
@@ -66,7 +66,7 @@ export default function Navbar({ children }) {
     {url: "/resources", name: "Technical Services"},
     /* TODO: technical services as nested dropdown? */
     {url: "/resources#center", name: "Resource Center"},
-    {url: "/resources#trainings", name: "Trainings"}
+    /* {url: "/resources#trainings", name: "Trainings"} */
   ]
 
   const quickLinks = [
