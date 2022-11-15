@@ -22,11 +22,13 @@ export default function Calendar() {
 
       <Section id="workshops"></Section>
 
+      {/*
       <Section id="conferences"></Section>
 
       <Section id="meetings"></Section>
 
       <Section id="community-events"></Section>
+      */}
 
     </div>
   )

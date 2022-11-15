@@ -16,8 +16,6 @@ export default function Resources() {
 
       <Section id="center"></Section>
 
-      <Section id="fhir-map"></Section>
-
       <Section id="trainings"></Section>
     </div>
   )
