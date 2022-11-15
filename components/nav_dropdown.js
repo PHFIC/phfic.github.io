@@ -25,12 +25,11 @@ export default function NavDropdown(props) {
       <Dropdown.Toggle as={NavLink} className={bold ? "text-light fw-bold" : "text-light"}>{props.title}</Dropdown.Toggle>
       <Dropdown.Menu className="bg-primary shadow-sm" variant="dark" align="end">
         {props.links.map(function(link, i) {
-            if( i+1 < props.links.length ) {
-                return <Dropdown.Item as={NavLink} key={link.url} href={link.url} className="text-center border-bottom border-dark border-opacity-50">{link.name}</Dropdown.Item>
-            }
-            else {
-                return <Dropdown.Item as={NavLink} key={link.url} href={link.url} className="text-center">{link.name}</Dropdown.Item>
-            }
+            return <Dropdown.Item as={NavLink} key={link.url} href={link.url}
+                                  target={link.external ? '_blank' : '_self' }
+                                  className={ (i + 1 < props.links.length) ? "text-center border-bottom border-dark border-opacity-50" : "text-center" }>
+                       {link.name}
+                   </Dropdown.Item>
         })}
       </Dropdown.Menu>
     </Dropdown>
