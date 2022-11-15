@@ -1,6 +1,8 @@
 // components/navbar.js
 import {Nav, Navbar as BootstrapNavbar, NavDropdown as BootstrapNavDropdown, Container} from 'react-bootstrap'
 import NavDropdown from './nav_dropdown'
+import Image from 'next/image'
+import Logo from '../public/favicon.ico'
 
 /* Navbar structure:
  * -----------------
@@ -103,14 +105,16 @@ export default function Navbar({ children }) {
 
           {/* Logo */}
           <BootstrapNavbar.Brand className="fs-3" href="/">
-            <img
-              alt=""
-              src="/favicon.ico"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
+            <Image
+                src={Logo}
+                alt={"Public Health FHIR® Implementation Collaborative"}
+                width={30}
+                height={30}
+                className="d-inline-block align-top"
             />{' '}
+
             PHFIC
+
           </BootstrapNavbar.Brand>
 
         <BootstrapNavbar.Toggle aria-controls="navbar-nav" />
