@@ -12,7 +12,7 @@ export default function Home() {
       <Title prefix="Home" />
 
       <Section id="landing" style={{overflow: "hidden", position: "relative"}}>
-        <Image 
+        <Image
             src={HealthCover}
             alt="In the Realm of Public Health"
             fill={true}
@@ -20,10 +20,10 @@ export default function Home() {
             style={{objectFit: "cover", zIndex: "-1"}}
         />
 
-        <Container fluid style={{position: "absolute", height: "90vh"}}>
+        <Container fluidx style={{position: "absolute", height: "80%", padding: "0px"}}>
           <Row className="h-100">
-            <Col xs={6} className="d-flex h-100">
-                <h1 className="display-2 align-self-center text-center w-100 my-5 my-md-3">
+            <Col sm={6} className="d-flex h-100 p-0">
+                <h1 className="display-2 align-self-center text-center w-100 my-5 my-md-3 rounded bg-xs-primary-opacity-50">
                     Public Health FHIR&reg; Implementation Collaborative
                 </h1>
             </Col>

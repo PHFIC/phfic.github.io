@@ -11,3 +11,9 @@ $danger: #dc3545;    /* red */
 /* ensure all pages have Bootstrap CSS */
 @import '~bootstrap/scss/bootstrap';
 
+@media (max-width: 575.98px) {
+  .bg-xs-primary-opacity-50 {
+    --bs-bg-opacity: 0.5;
+    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  }
+}
