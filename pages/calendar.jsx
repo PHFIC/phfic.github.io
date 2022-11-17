@@ -20,6 +20,7 @@ export default function Calendar() {
 
       <Section id="cdc-fhir-cop"></Section>
 
+      {/*
       <Section id="workshops"></Section>
 
       <Section id="conferences"></Section>
@@ -27,6 +28,7 @@ export default function Calendar() {
       <Section id="meetings"></Section>
 
       <Section id="community-events"></Section>
+      */}
 
     </div>
   )

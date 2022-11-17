@@ -16,9 +16,11 @@ export default function Calendar() {
 
       <Section id="cdc-fhir-cop"></Section>
 
+      {/*
       <Section id="subcommittees"></Section>
 
       <Section id="communicate"></Section>
+      */}
     </div>
   )
 }
