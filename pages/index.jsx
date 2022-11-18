@@ -34,8 +34,15 @@ export default function Home() {
 
       </Section>
 
+      {/*
+      <Section id="fhir" className="">
+        WHAT IS FHIR SECTION??
+      </Section>
+      */}
+
       <Section id="about" className="bg-success">
         {/* TODO three card layout: Build Community, Pilot Test FHIR, Advise on FHIR */}
+        
       </Section>
 
       <Section id="vision">
