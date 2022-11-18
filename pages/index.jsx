@@ -39,12 +39,10 @@ export default function Home() {
       </Section>
 
       <Section id="vision">
-        <blockquote className="display-5 px-sm-5">
-            <i>
+        <blockquote className="display-5 px-sm-5" style={{marginTop: "20vh"}}>
               &ldquo;We are a community established in 2022 for improving <b><u>public health to public health data exchange</u></b>&nbsp;
               using FHIR® by identifying key implementation challenges, providing training opportunities, demonstrating small scale&nbsp;
               impact, and promoting best practices.&rdquo;
-            </i>
         </blockquote>
         <hr className="border border-primary border-3 opacity-75 mx-md-5 mx-sm-3" />
        {/* TODO: move blockquote into left column and add visionary image as right column */}
