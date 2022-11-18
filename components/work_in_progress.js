@@ -13,7 +13,7 @@ import Alert from 'react-bootstrap/Alert'
  */
 export default function WorkInProgress(props) {
   return (
-    <Container>
+    <Container className={props.className} style={props.style}>
       <Alert variant="danger">
 
         <Alert.Heading>{props.name || "Work in Progress"}</Alert.Heading>

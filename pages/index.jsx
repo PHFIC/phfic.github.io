@@ -30,11 +30,12 @@ export default function Home() {
           </Row>
         </Container>
 
+        <WorkInProgress className="position-relative mx-auto my-5" style={{zIndex: "1"}} />
+
       </Section>
 
       <Section id="about" className="bg-success">
         <br />
-        <WorkInProgress />
       </Section>
 
       <Section id="vision"></Section>

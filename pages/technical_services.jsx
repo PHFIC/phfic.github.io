@@ -5,11 +5,11 @@ import WorkInProgress from '../components/work_in_progress'
 
 export default function TechnicalServices() {
   return (
-    <Section id="main">
+    <Section id="main" debug="true">
       <Title prefix="Technical Services" />
 
       <h1 className="text-center w-100 my-3">PHFIC Technical Services</h1>
-      
+
       <WorkInProgress name="Technical Services Page WIP" />
     </Section>
   )
