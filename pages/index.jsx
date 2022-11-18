@@ -20,7 +20,7 @@ export default function Home() {
             style={{objectFit: "cover", zIndex: "-1"}}
         />
 
-        <Container fluidx style={{position: "absolute", height: "80%", padding: "0px"}}>
+        <Container fluid style={{position: "absolute", height: "80%", padding: "0px"}}>
           <Row className="h-100">
             <Col sm={6} className="d-flex h-100 p-0">
                 <h1 className="display-2 align-self-center text-center w-100 my-5 my-md-3 rounded bg-xs-primary-opacity-50">
@@ -35,16 +35,28 @@ export default function Home() {
       </Section>
 
       <Section id="about" className="bg-success">
-        <br />
+        {/* TODO three card layout: Build Community, Pilot Test FHIR, Advise on FHIR */}
       </Section>
 
-      <Section id="vision"></Section>
+      <Section id="vision">
+        <blockquote className="display-5 px-sm-5">
+            <i>
+              &ldquo;We are a community established in 2022 for improving <b><u>public health to public health data exchange</u></b>&nbsp;
+              using FHIR® by identifying key implementation challenges, providing training opportunities, demonstrating small scale&nbsp;
+              impact, and promoting best practices.&rdquo;
+            </i>
+        </blockquote>
+        <hr className="border border-primary border-3 opacity-75 mx-md-5 mx-sm-3" />
+       {/* TODO: move blockquote into left column and add visionary image as right column */}
+      </Section>
 
-      <Section id="collaborative-structure"></Section>
+      <Section id="collaborative-structure">{/* TODO: remove?? */}</Section>
 
-      <Section id="spotlight"></Section>
+      <Section id="spotlight">{/* use cases carousel */}</Section>
 
-      <Section id="pilot-site-map"></Section>
+      <Section id="pilot-site-map">{/* pilot site map image */}</Section>
+
+      <Section>{/* TODO: join us button and/or four tiles for difference services (playbook, office hours, training modules, work) */}</Section>
     </div>
   )
 }
