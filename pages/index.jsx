@@ -33,7 +33,7 @@ export default function Home() {
         />
 
         <Container fluid style={{position: "absolute", height: "80%", padding: "0px"}}>
-          <Row className="h-100">
+          <Row className="h-100 w-100">
             <Col sm={6} className="d-flex h-100 p-0">
                 <h1 className="display-2 align-self-center text-center w-100 my-5 my-md-3 rounded bg-xs-primary-opacity-50">
                     Public Health FHIR&reg; Implementation Collaborative
@@ -54,7 +54,7 @@ export default function Home() {
 
       <Section id="about" className="bg-success">
           <h1 className="display-3 w-100 text-center">Our objectives are to</h1>
-          <Row md={1} lg={3} className="justify-content-around g-4">
+          <Row md={1} lg={3} className="justify-content-around g-4 w-100">
             <GridCard src={CommunityImg} alt="Build Community" title="Build a Community">
               <p className="text-lead fs-5 m-0">
                 of public health practitioners, public policy managers, epidemiologists, and physicians.
@@ -63,18 +63,18 @@ export default function Home() {
             <GridCard src={PilotImg} alt="Pilot FHIR (registered)" title="Pilot FHIR®">
               <p className="text-lead fs-5 m-0">
                 for solving healthcare interoperability at a state level.
+                <br />
+                <br />
               </p>
             </GridCard>
             <GridCard src={AdviseImg} alt="Advise Peers" title="Advise on FHIR®">
               <p className="text-lead fs-5 m-0">
                 for public state departments to begin developing their own healthcare solutions.
-                <br />
-                <br />
               </p>
             </GridCard>
           </Row>
           <Row className="justify-content-center justify-content-md-end">
-            <Button variant="primary" size="lg" className="m-3" style={{width: "20rem"}} href="https://en.wikipedia.org/wiki/Fast_Healthcare_Interoperability_Resources" target="_blank">
+            <Button variant="primary" size="lg" className="my-auto me-5" style={{width: "20rem"}} href="https://en.wikipedia.org/wiki/Fast_Healthcare_Interoperability_Resources" target="_blank">
                 What is FHIR&reg;? &#x02197;
             </Button>
           </Row>
