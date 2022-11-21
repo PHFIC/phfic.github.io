@@ -5,6 +5,10 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import WorkInProgress from '../components/work_in_progress'
 import Image from 'next/image'
 import HealthCover from '../public/HealthCover1-Large.jpg'
+import CommunityImg from '../public/Community-Dark.png'
+import PilotImg from '../public/Pilot-Dark.jpg'
+import AdviseImg from '../public/Advise-Dark-Large.jpg'
+import GridCard from '../components/grid_card'
 
 export default function Home() {
   return (
@@ -18,6 +22,7 @@ export default function Home() {
             fill={true}
             priority
             style={{objectFit: "cover", zIndex: "-1"}}
+            placeholder="blur"
         />
 
         <Container fluid style={{position: "absolute", height: "80%", padding: "0px"}}>
@@ -41,8 +46,31 @@ export default function Home() {
       */}
 
       <Section id="about" className="bg-success">
-        {/* TODO three card layout: Build Community, Pilot Test FHIR, Advise on FHIR */}
-        
+        <Container fluid>
+          <h1 className="display-3 w-100 text-center">Our objectives are to</h1>
+          <Row md={1} lg={3} className="justify-content-around g-4">
+            <GridCard src={CommunityImg} alt="Build Community" title="Build a Community">
+              <p className="text-lead fs-5 m-0">
+                of public health practitioners, public policy managers, epidemiologists, and physicians.
+              </p>
+            </GridCard>
+            <GridCard src={PilotImg} alt="Pilot FHIR (registered)" title="Pilot FHIR®">
+              <p className="text-lead fs-5 m-0">
+                for solving healthcare interoperability at a state level.
+              </p>
+            </GridCard>
+            <GridCard src={AdviseImg} alt="Advise Peers" title="Advise on FHIR®">
+              <p className="text-lead fs-5 m-0">
+                for public state departments to begin developing their own healthcare solutions.
+              </p>
+            </GridCard>
+          </Row>
+          <Row className="justify-content-center justify-content-md-end">
+            <Button variant="primary" size="lg" className="m-3" style={{width: "20rem"}} href="https://en.wikipedia.org/wiki/Fast_Healthcare_Interoperability_Resources" target="_blank">
+                What is FHIR&reg;? &#x02197;
+            </Button>
+          </Row>
+        </Container>
       </Section>
 
       <Section id="vision">

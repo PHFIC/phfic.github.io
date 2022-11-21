@@ -1,3 +1,4 @@
+// components/section.js
 import { Container, Badge } from 'react-bootstrap'
 
 export default function Section(props) {
