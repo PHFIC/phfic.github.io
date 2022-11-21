@@ -14,7 +14,8 @@ import HealthCover from '../public/HealthCover1-Large.jpg'
 import CommunityImg from '../public/Community-Dark.png'
 import PilotImg from '../public/Pilot-Dark.jpg'
 import AdviseImg from '../public/Advise-Dark-Large.jpg'
-import CommunicationImg from '../public/GlobalCommunication.jpg'
+//import CommunicationImg from '../public/GlobalCommunication.jpg'
+import CommunicationImg from '../public/WorldNetwork.gif'
 
 // view logic + content
 export default function Home() {
@@ -92,13 +93,13 @@ export default function Home() {
             </Col>
             <Col md={6} className="p-0">
               <div className="position-relative h-100 d-md-none d-lg-block">
-                <Image src={CommunicationImg} fill={true} style={{objectFit:"cover"}} placeholder="blur" alt="Global Communication"/>
+                <Image src={CommunicationImg} fill={true} style={{objectFit:"cover"}} alt="Global Communication"/>
               </div>
             </Col>
           </Row>
       </Section>
 
-      <Section id="collaborative-structure" className="bg-primary">
+      <Section id="collaborative-structure" className="bg-secondary">
         <br />
         <br />
         <br />
