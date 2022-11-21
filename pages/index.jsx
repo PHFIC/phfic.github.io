@@ -74,7 +74,7 @@ export default function Home() {
             </GridCard>
           </Row>
           <Row className="justify-content-center justify-content-md-end">
-            <Button variant="primary" size="lg" className="my-auto me-5" style={{width: "20rem"}} href="https://en.wikipedia.org/wiki/Fast_Healthcare_Interoperability_Resources" target="_blank">
+            <Button variant="primary" size="lg" className="my-3 me-5" style={{width: "20rem"}} href="https://en.wikipedia.org/wiki/Fast_Healthcare_Interoperability_Resources" target="_blank">
                 What is FHIR&reg;? &#x02197;
             </Button>
           </Row>
