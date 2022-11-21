@@ -1,15 +1,22 @@
+// pages/index.jsx -> renders / (home page)
+
 import Head from 'next/head'
 import Title from '../components/title'
 import Section from '../components/section'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import WorkInProgress from '../components/work_in_progress'
 import Image from 'next/image'
+import GridCard from '../components/grid_card'
+
+
+// image imports
 import HealthCover from '../public/HealthCover1-Large.jpg'
 import CommunityImg from '../public/Community-Dark.png'
 import PilotImg from '../public/Pilot-Dark.jpg'
 import AdviseImg from '../public/Advise-Dark-Large.jpg'
-import GridCard from '../components/grid_card'
+import CommunicationImg from '../public/GlobalCommunication.jpg'
 
+// view logic + content
 export default function Home() {
   return (
     <div>
@@ -46,7 +53,6 @@ export default function Home() {
       */}
 
       <Section id="about" className="bg-success">
-        <Container fluid>
           <h1 className="display-3 w-100 text-center">Our objectives are to</h1>
           <Row md={1} lg={3} className="justify-content-around g-4">
             <GridCard src={CommunityImg} alt="Build Community" title="Build a Community">
@@ -62,6 +68,8 @@ export default function Home() {
             <GridCard src={AdviseImg} alt="Advise Peers" title="Advise on FHIR®">
               <p className="text-lead fs-5 m-0">
                 for public state departments to begin developing their own healthcare solutions.
+                <br />
+                <br />
               </p>
             </GridCard>
           </Row>
@@ -70,20 +78,36 @@ export default function Home() {
                 What is FHIR&reg;? &#x02197;
             </Button>
           </Row>
-        </Container>
       </Section>
 
-      <Section id="vision">
-        <blockquote className="display-5 px-sm-5" style={{marginTop: "20vh"}}>
-              &ldquo;We are a community established in 2022 for improving <b><u>public health to public health data exchange</u></b>&nbsp;
-              using FHIR® by identifying key implementation challenges, providing training opportunities, demonstrating small scale&nbsp;
-              impact, and promoting best practices.&rdquo;
-        </blockquote>
-        <hr className="border border-primary border-3 opacity-75 mx-md-5 mx-sm-3" />
-       {/* TODO: move blockquote into left column and add visionary image as right column */}
+      <Section id="vision" noMinHeight={true}>
+          <Row>
+            <Col md={6}>
+              <blockquote className="display-5 px-sm-5 my-5">
+                &ldquo;We are a community established in 2022 for improving <b><u>public health to public health data exchange</u></b>&nbsp;
+                using FHIR® by identifying key implementation challenges, providing training opportunities, demonstrating small scale&nbsp;
+                impact, and promoting best practices.&rdquo;
+              </blockquote>
+              <hr className="border border-primary border-3 opacity-75 mx-md-5 mx-sm-3" />
+            </Col>
+            <Col md={6} className="p-0">
+              <div className="position-relative h-100 d-md-none d-lg-block">
+                <Image src={CommunicationImg} fill={true} style={{objectFit:"cover"}} placeholder="blur" alt="Global Communication"/>
+              </div>
+            </Col>
+          </Row>
       </Section>
 
-      <Section id="collaborative-structure">{/* TODO: remove?? */}</Section>
+      <Section id="collaborative-structure" className="bg-primary">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </Section>
 
       <Section id="spotlight">{/* use cases carousel */}</Section>
 
