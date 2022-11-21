@@ -16,6 +16,7 @@ import PilotImg from '../public/Pilot-Dark.jpg'
 import AdviseImg from '../public/Advise-Dark-Large.jpg'
 //import CommunicationImg from '../public/GlobalCommunication.jpg'
 import CommunicationImg from '../public/WorldNetwork.gif'
+import PilotSiteMapImg from '../public/PHFICPilotSiteMap.png'
 
 // view logic + content
 export default function Home() {
@@ -43,7 +44,7 @@ export default function Home() {
           </Row>
         </Container>
 
-        <WorkInProgress className="position-relative mx-auto my-5" style={{zIndex: "1"}} />
+        {/* <WorkInProgress className="position-relative mx-auto my-5" style={{zIndex: "1"}} /> */}
 
       </Section>
 
@@ -100,19 +101,23 @@ export default function Home() {
       </Section>
 
       <Section id="collaborative-structure" className="bg-secondary">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <h2>CDC DMI</h2>
+        <h2>PHFIC Steering Committee</h2>
+        <h2>State, Tribal, Local, and Territorial Parties</h2>
+        <h2>3rd Party Vendors</h2>
       </Section>
 
-      <Section id="spotlight">{/* use cases carousel */}</Section>
+      <Section id="spotlight">
+        <h1>TODO</h1>
+      </Section>
 
-      <Section id="pilot-site-map">{/* pilot site map image */}</Section>
+      <Section id="pilot-site-map" className="position-relative" noMinHeight="true">
+        <h1 className="w-100 text-center display-3 position-relative" style={{zIndex: "1"}}>PHFIC Pilot Sites</h1>
+        <Image src={PilotSiteMapImg}
+               alt="PHFIC has a total 3 pairs of pilot sites that are Washington State-King County, Minnesota State-Hennepin County, and Virginia State-Fairfax County."
+               width="100vw"
+               style={{maxWidth:"100vw", maxHeight:"100vh", objectFit:"contain", height:"min-content"}}/>
+      </Section>
 
       <Section>{/* TODO: join us button and/or four tiles for difference services (playbook, office hours, training modules, work) */}</Section>
     </div>
