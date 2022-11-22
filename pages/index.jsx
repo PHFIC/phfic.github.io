@@ -38,7 +38,7 @@ export default function Home() {
         <Container fluid style={{position: "absolute", height: "80%", padding: "0px"}}>
           <Row className="h-100 w-100">
             <Col sm={6} className="d-flex h-100 p-0">
-                <h1 className="display-2 align-self-center text-center w-100 my-5 my-md-3 rounded bg-xs-primary-opacity-50">
+                <h1 className="display-2 align-self-center text-center w-100 ms-2 my-5 my-md-3 rounded bg-xs-primary-opacity-50">
                     Public Health FHIR&reg; Implementation Collaborative
                 </h1>
             </Col>
@@ -85,7 +85,7 @@ export default function Home() {
 
       <Section id="vision" noMinHeight={true}>
           <Row>
-            <Col md={6}>
+            <Col lg={6}>
               <blockquote className="display-5 px-sm-5 my-5 text-center text-md-start">
                 &ldquo;We are a community established in 2022 for improving <b><u>public health to public health data exchange</u></b>&nbsp;
                 using FHIR® by identifying key implementation challenges, providing training opportunities, demonstrating small scale&nbsp;
@@ -93,7 +93,7 @@ export default function Home() {
               </blockquote>
               <hr className="border border-primary border-3 opacity-75 mx-md-5 mx-sm-3" />
             </Col>
-            <Col md={6} className="p-0">
+            <Col lg={6} className="p-0">
               <div className="position-relative h-100 d-md-none d-lg-block">
                 <Image src={CommunicationImg} fill={true} style={{objectFit:"cover"}} alt="Global Communication"/>
               </div>
@@ -110,6 +110,7 @@ export default function Home() {
               <h2 className="display-4">PHFIC Steering Committee</h2>
               <h2 className="display-4">State, Tribal, Local, and Territorial Parties</h2>
               <h2 className="display-4">3rd Party Vendors</h2>
+              <h2 className="display-4">Public Health Associations</h2>
             </Container>
           </Col>
         </Row>
