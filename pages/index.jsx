@@ -7,7 +7,8 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import WorkInProgress from '../components/work_in_progress'
 import Image from 'next/image'
 import GridCard from '../components/grid_card'
-
+import DarkCarousel from '../components/dark_carousel'
+import Tile from '../components/tile'
 
 // image imports
 import HealthCover from '../public/HealthCover1-Large.jpg'
@@ -85,7 +86,7 @@ export default function Home() {
       <Section id="vision" noMinHeight={true}>
           <Row>
             <Col md={6}>
-              <blockquote className="display-5 px-sm-5 my-5">
+              <blockquote className="display-5 px-sm-5 my-5 text-center text-md-start">
                 &ldquo;We are a community established in 2022 for improving <b><u>public health to public health data exchange</u></b>&nbsp;
                 using FHIR® by identifying key implementation challenges, providing training opportunities, demonstrating small scale&nbsp;
                 impact, and promoting best practices.&rdquo;
@@ -101,14 +102,23 @@ export default function Home() {
       </Section>
 
       <Section id="collaborative-structure" className="bg-secondary">
-        <h2>CDC DMI</h2>
-        <h2>PHFIC Steering Committee</h2>
-        <h2>State, Tribal, Local, and Territorial Parties</h2>
-        <h2>3rd Party Vendors</h2>
+        <Row>
+          <Col className="text-center text-light">
+
+            <Container className="mx-auto my-5">
+              <h2 className="display-4">CDC DMI</h2>
+              <h2 className="display-4">PHFIC Steering Committee</h2>
+              <h2 className="display-4">State, Tribal, Local, and Territorial Parties</h2>
+              <h2 className="display-4">3rd Party Vendors</h2>
+            </Container>
+          </Col>
+        </Row>
       </Section>
 
-      <Section id="spotlight">
-        <h1>TODO</h1>
+      <Section id="spotlight" noMinHeight="true">
+        <h1 className="w-100 text-center display-2 bg-dark text-light m-0">Recent Activity Spotlight</h1>
+        <DarkCarousel />
+        <hr />
       </Section>
 
       <Section id="pilot-site-map" className="position-relative" noMinHeight="true">
@@ -119,7 +129,15 @@ export default function Home() {
                style={{maxWidth:"100vw", maxHeight:"100vh", objectFit:"contain", height:"min-content"}}/>
       </Section>
 
-      <Section>{/* TODO: join us button and/or four tiles for difference services (playbook, office hours, training modules, work) */}</Section>
+      <Section id="get-started" className="bg-primary">
+          <h1 className="w-100 text-center text-light display-2 my-2">Dive Deeper...</h1>
+          <Row className="row-cols-lg-2">
+            <Tile href="/join" title="Join PHFIC"/>
+            <Tile href="/playbook" title="Playbook"/>
+            <Tile href="/resources#office-hours" title="Office Hours"/>
+            <Tile href="/404" title="More Coming Soon!"/>{/* todo: disabling */}
+          </Row>
+      </Section>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-// components/card.js
+// components/grid_card.js
 // NOTE: render this component within <Row> ... </Row>
 
 import { Col, Card } from 'react-bootstrap'
