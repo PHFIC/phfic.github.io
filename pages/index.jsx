@@ -35,25 +35,19 @@ export default function Home() {
             placeholder="blur"
         />
 
-        <Container fluid style={{position: "absolute", height: "80%", padding: "0px"}}>
+        <div style={{position: "absolute", height: "80%"}}>
           <Row className="h-100 w-100">
             <Col sm={6} className="d-flex h-100 p-0">
-                <h1 className="display-2 align-self-center text-center w-100 ms-2 my-5 my-md-3 rounded bg-xs-primary-opacity-50">
+                <h1 className="display-2 align-self-center text-center w-100 mx-2 my-5 my-md-3 rounded bg-xs-primary-opacity-50">
                     Public Health FHIR&reg; Implementation Collaborative
                 </h1>
             </Col>
           </Row>
-        </Container>
+        </div>
 
         {/* <WorkInProgress className="position-relative mx-auto my-5" style={{zIndex: "1"}} /> */}
 
       </Section>
-
-      {/*
-      <Section id="fhir" className="">
-        WHAT IS FHIR SECTION??
-      </Section>
-      */}
 
       <Section id="about" className="bg-success">
           <h1 className="display-3 w-100 text-center">Our objectives are to</h1>
@@ -77,7 +71,7 @@ export default function Home() {
             </GridCard>
           </Row>
           <Row className="justify-content-center justify-content-md-end">
-            <Button variant="primary" size="lg" className="my-3 me-5" style={{width: "20rem"}} href="https://en.wikipedia.org/wiki/Fast_Healthcare_Interoperability_Resources" target="_blank">
+            <Button variant="primary" size="lg" className="my-3 me-md-5" style={{width: "20rem"}} href="https://www.healthit.gov/topic/standards-technology/standards/fhir-fact-sheets" target="_blank">
                 What is FHIR&reg;? &#x02197;
             </Button>
           </Row>

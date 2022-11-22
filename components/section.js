@@ -3,7 +3,7 @@ import { Container, Badge } from 'react-bootstrap'
 
 export default function Section(props) {
 
-  let defaultClass = "lg-container p-0 m-0"
+  let defaultClass = "lg-container p-3 p-md-2 p-lg-0 m-0"
 
   return (
     <Container fluid id={props.id} className={props.className ? defaultClass + " " + props.className : defaultClass} style={ props.noMinHeight ? {} : {minHeight: "85vh"} }>

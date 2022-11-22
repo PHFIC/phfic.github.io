@@ -9,8 +9,8 @@ export default function GridCard(props) {
     return (
         <Col>
             <Card className="m-3 mx-auto rounded shadow-lg" style={{width: "min-content"}}>
-                <Card.Header as="h1" className="text-center">{props.title}</Card.Header>
-                <Image className="card-image-top p-3" src={props.src} alt={props.alt}/>
+                <Card.Header as="h2" className="text-center">{props.title}</Card.Header>
+                <Image className="card-image-top p-3" src={props.src} alt={props.alt} width="auto" height="343" />
                 <Card.Footer>
                     { props.children }
                 </Card.Footer>
