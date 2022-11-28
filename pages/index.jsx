@@ -124,13 +124,13 @@ export default function Home() {
                style={{maxWidth:"100vw", maxHeight:"100vh", objectFit:"contain", height:"min-content"}}/>
       </Section>
 
-      <Section id="get-started" className="bg-primary">
+      <Section id="get-started" className="bg-primary text-center align-middle">
           <h1 className="w-100 text-center text-light display-2 my-2">Dive Deeper...</h1>
-          <Row className="row-cols-lg-2">
-            <Tile href="/join" title="Join PHFIC"/>
-            <Tile href="/playbook" title="Playbook"/>
-            <Tile href="/resources#office-hours" title="Office Hours"/>
-            <Tile href="/404" title="More Coming Soon!"/>{/* todo: disabling */}
+          <Row className="row-cols-lg-2 position-relative bottom-0">
+            <Tile href="/join" title="Join PHFIC" variant="success"/>
+            <Tile href="/playbook" title="Playbook" variant="danger"/>
+            <Tile href="/resources#office-hours" title="Office Hours" variant="warning"/>
+            <Tile href="/404" title="More Coming Soon!" variant="dark" disabled/>{/* todo: disabling */}
           </Row>
       </Section>
     </div>
