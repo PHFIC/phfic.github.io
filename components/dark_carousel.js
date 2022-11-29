@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function DarkCarousel() {
   return (
-    <Carousel variant="dark" height="100%">
+    <Carousel variant="dark" height="100%" controls={false}>
       <Carousel.Item>
         <Image
           className="d-block w-100"

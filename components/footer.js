@@ -2,8 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="text-center mb-5">
-      <hr />
+    <footer className="text-center bg-light pt-2 pb-5">
       Copyright &copy; 2022 MITRE. All rights reserved.
       <br />
 
