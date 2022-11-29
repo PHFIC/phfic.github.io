@@ -21,6 +21,7 @@ export default function TechnicalServices() {
       <WorkInProgress name="Past Office Hours WIP" />
     </Section>
 
+    {/*
     <Section id="workshops" debug="true">
       <Title prefix="Workshops" />
 
@@ -28,6 +29,6 @@ export default function TechnicalServices() {
 
       <WorkInProgress name="Workshops WIP" />
     </Section>
-
+    */}
   </>)
 }
