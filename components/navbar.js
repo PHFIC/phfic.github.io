@@ -36,8 +36,8 @@ export default function Navbar({ children }) {
   const calendarLinks = [
     {url: "/calendar", name: "Calendar"},
     {url: "/calendar#office-hours", name: "Office Hours"},
-    {url: "/calendar#steering-committee", name: "Steering Committee"} //,
-    /* {url: "/calendar#cdc-fhir-cop", name: "CDC FHIR Community of Practice"}, */
+    {url: "/calendar#steering-committee", name: "Steering Committee"},
+    {url: "/calendar#cdc-fhir-cop", name: "CDC FHIR Community of Practice"} //,
     /* {url: "/calendar#workshops", name: "Workshops & Trainings"}, */
     /* {url: "/calendar#conferences", name: "Conferences"}, */
     /* {url: "/calendar#meetings", name: "Events/Meetings"}, */
@@ -57,18 +57,20 @@ export default function Navbar({ children }) {
     {url: "/playbook/download", name: "Download PDF " + darr}
   ];
 
+
+  const servicesLinks = [
+    {url: "/services", name: "Overview"},
+    {url: "/services#office-hours", name: "Office Hours"},
+    {url: "/services#workshops", name: "Workshops"},
+    {url: "/resources", name: "Resources"},
+    /* {url: "/resources#trainings", name: "Trainings"} */
+  ]
+
   const joinLinks = [
     {url: "/join", name: "Join PHFIC"},
     {url: "/join#cdc-fhir-cop", name: "Join CDC FHIR Community of Practice"} /* , */
     /* {url: "/join#subcommittees", name: "Join Subcommittees"}, */
     /* {url: "/join#communicate", name: "Communicate with Community"} */
-  ]
-
-  const resourceLinks = [
-    {url: "/resources", name: "Technical Services"},
-    /* TODO: technical services as nested dropdown? */
-    {url: "/resources#center", name: "Resource Center"},
-    /* {url: "/resources#trainings", name: "Trainings"} */
   ]
 
   const quickLinks = [
@@ -77,8 +79,8 @@ export default function Navbar({ children }) {
     {url: "/calendar", name: "PHFIC Calendar"},
     {url: "https://forms.office.com/g/LtdTUPcVem", name: "Questions & Advisory Requests " + nearr, external: true},
     /* {url: "/404#1", name: "PHFIC Knowledge Repository"}, */
-    {url: "/resources", name: "PHFIC Technical Services"},
-    {url: "/resources#center", name: "PHFIC Resources"},
+    {url: "/services", name: "PHFIC Advisory Services"},
+    {url: "/resources", name: "PHFIC Resources"},
     /* {url: "https://www.cdc.gov/csels/phio/it_takes_practice.html", name: "FHIR CoP Newsletter"}, TODO: this may exist as an http link... */
     /* {url: "/404#2", name: "Submit Topic for CoP Newsletter"}, */
     /* {url: "/404#3", name: "Submit Content for Knowledge Repository"}, */
@@ -129,9 +131,9 @@ export default function Navbar({ children }) {
 
             <NavDropdown title="Playbook" links={playbookLinks} />
 
-            <NavDropdown title="Join Us" links={joinLinks} />
+            <NavDropdown title="Advisory Services" links={servicesLinks} />
 
-            <NavDropdown title="Resources" links={resourceLinks} />
+            <NavDropdown title="Join Us" links={joinLinks} />
 
             <NavDropdown title="Quick Links" links={quickLinks} />
 

@@ -14,9 +14,9 @@ export default function Resources() {
         <WorkInProgress name="Resources Page - WIP" />
       </Section>
 
+      {/*
       <Section id="center" debug="true"></Section>
 
-      {/*
       <Section id="trainings"></Section>
       */}
 
