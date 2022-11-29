@@ -61,14 +61,14 @@ export default function Navbar({ children }) {
   const servicesLinks = [
     {url: "/services", name: "Overview"},
     {url: "/services#office-hours", name: "Office Hours"},
-    {url: "/services#workshops", name: "Workshops"},
+    /* {url: "/services#workshops", name: "Workshops"}, */
     {url: "/resources", name: "Resources"},
     /* {url: "/resources#trainings", name: "Trainings"} */
   ]
 
   const joinLinks = [
     {url: "/join", name: "Join PHFIC"},
-    {url: "/join#cdc-fhir-cop", name: "Join CDC FHIR Community of Practice"} /* , */
+    {url: "/join#cdc-fhir-cop", name: "Join CDC FHIR Community of Practice"},
     /* {url: "/join#subcommittees", name: "Join Subcommittees"}, */
     /* {url: "/join#communicate", name: "Communicate with Community"} */
   ]
