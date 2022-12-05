@@ -111,7 +111,7 @@ export default function Home() {
         <Image src={StructureImg} style={{objectFit:"contain",width:"100vw"}} alt="PHFIC is composed of a Steering Commitee, Advisory Services, Public Health Players, and Pilot or Real World Activities that form a feedback loop for realizing the CDC Data Modernization Initiative."/>
       </Section>
 
-      <Section id="spotlight" noMinHeight="true" className="bg-primary mb-0">
+      <Section id="spotlight" noMinHeight="true" className="bg-dark mb-0">
         <Row className="row-cols-2-reverse g-0">
           <Col>
             <DarkCarousel slides={spotlight}/>

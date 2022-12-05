@@ -1,12 +1,13 @@
 /* index.scss */
 
 /* override color palette */
-$primary: #7253ed;   /* purple */
-$secondary: #052c65; /* dark blue */
-$success: #10ac7d;   /* green */
-$info: #0dcaf0;      /* cyan */
+$primary: #e64c3c;   /* fire red */
+$secondary: #f7941d; /* orange */
+$dark: #414020;       /* soft black */
+$success: #63e653;   /* green */
+$info: #25dee6;      /* cyan */
 $warning: #ffc107;   /* yellow */
-$danger: #dc3545;    /* red */
+$danger: #b33c2e;    /* red */
 
 /* ensure all pages have Bootstrap CSS */
 @import '~bootstrap/scss/bootstrap';
