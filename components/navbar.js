@@ -125,13 +125,15 @@ export default function Navbar({ children }) {
 
             <Nav.Link className="text-light" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>
 
-            <NavDropdown title="About Our Community" links={aboutLinks} />
+            <NavDropdown title="About" links={aboutLinks} />
 
             <NavDropdown title="Calendar" links={calendarLinks} />
 
             <NavDropdown title="Playbook" links={playbookLinks} />
 
             <NavDropdown title="Advisory Services" links={servicesLinks} />
+
+            <Nav.Link className="text-light" href="/faq" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
 
             <NavDropdown title="Join Us" links={joinLinks} />
 

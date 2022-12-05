@@ -18,9 +18,21 @@ import AdviseImg from '../public/Advise-Dark-Large.jpg'
 //import CommunicationImg from '../public/GlobalCommunication.jpg'
 import CommunicationImg from '../public/WorldNetwork.gif'
 import PilotSiteMapImg from '../public/PHFICPilotSiteMap.png'
+import Pilot1Img from '../public/PilotDeathPull.png'
+import Pilot2Img from '../public/PilotSurveillancePull.png'
+import Pilot3Img from '../public/PilotDeathReporting.png'
+import StructureImg from '../public/PHFICStructure.png'
+
 
 // view logic + content
 export default function Home() {
+
+  const spotlight = [
+    {id: 1, image: Pilot1Img, caption: "FHIR Death Records Pull"},
+    {id: 2, image: Pilot2Img, caption: "Syphallis Data Surveillance on FHIR"},
+    {id: 3, image: Pilot3Img, caption: "Death Reporting on FHIR"}
+  ];
+
   return (
     <div>
       <Title prefix="Home" />
@@ -95,25 +107,19 @@ export default function Home() {
           </Row>
       </Section>
 
-      <Section id="collaborative-structure" className="bg-secondary">
-        <Row>
-          <Col className="text-center text-light">
-
-            <Container className="mx-auto my-5">
-              <h2 className="display-4">CDC DMI</h2>
-              <h2 className="display-4">PHFIC Steering Committee</h2>
-              <h2 className="display-4">State, Tribal, Local, and Territorial Parties</h2>
-              <h2 className="display-4">3rd Party Vendors</h2>
-              <h2 className="display-4">Public Health Associations</h2>
-            </Container>
-          </Col>
-        </Row>
+      <Section id="collaborative-structure" className="bg-secondary position-relative" noMinHeight={true}>
+        <Image src={StructureImg} style={{objectFit:"contain",width:"100vw"}} alt="PHFIC is composed of a Steering Commitee, Advisory Services, Public Health Players, and Pilot or Real World Activities that form a feedback loop for realizing the CDC Data Modernization Initiative."/>
       </Section>
 
-      <Section id="spotlight" noMinHeight="true" className="bg-dark mb-0">
-        <h1 className="w-100 text-center display-2 bg-dark text-light m-0">Recent Activity Spotlight</h1>
-        <DarkCarousel />
-        <br />
+      <Section id="spotlight" noMinHeight="true" className="bg-primary mb-0">
+        <Row className="row-cols-2-reverse g-0">
+          <Col>
+            <DarkCarousel slides={spotlight}/>
+          </Col>
+          <Col className="my-auto">
+            <h1 className="w-100 text-center display-2 text-light">Recent Activity Spotlight</h1>
+          </Col>
+        </Row>
       </Section>
 
       <Section id="pilot-site-map" className="bg-light position-relative" noMinHeight="true">
