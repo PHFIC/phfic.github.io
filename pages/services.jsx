@@ -5,24 +5,24 @@ import WorkInProgress from '../components/work_in_progress'
 
 export default function TechnicalServices() {
   return (<>
-    <Section id="main" debug="true">
-      <Title prefix="Technical Services" />
+    <Title prefix="Technical Services" />
+    <Section id="main">
 
       <h1 className="text-center w-100 my-3">PHFIC Advisory Services</h1>
 
-      <WorkInProgress name="Technical Services Page WIP" />
+      <WorkInProgress name="Advisory Services Page WIP" />
     </Section>
 
-    <Section id="office-hours" debug="true">
-      <Title prefix="Office Hours" />
-
+    <Section id="office-hours" noMinHeight={true}>
+    {/*
       <h1 className="text-center w-100 my-3">Past Office Hours</h1>
 
       <WorkInProgress name="Past Office Hours WIP" />
+    */}
     </Section>
 
     {/*
-    <Section id="workshops" debug="true">
+    <Section id="workshops" >
       <Title prefix="Workshops" />
 
       <h1 className="text-center w-100 my-3">Workshops</h1>

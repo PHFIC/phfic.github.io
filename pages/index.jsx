@@ -47,7 +47,7 @@ export default function Home() {
             placeholder="blur"
         />
 
-        <div style={{position: "relative", height: "80vh"}}>
+        <div style={{position: "relative"}}>
           <Row className="h-100 w-100">
             <Col sm={6} className="d-flex h-100 p-0">
                 <h1 className="display-2 align-self-center text-center w-100 mx-2 my-5 my-md-3 rounded bg-xs-primary-opacity-50">
