@@ -27,7 +27,7 @@ export default function NavDropdown(props) {
         {props.links.map(function(link, i) {
             return <Dropdown.Item as={NavLink} key={link.url} href={link.url}
                                   target={link.external ? '_blank' : '_self' }
-                                  className={ (i + 1 < props.links.length) ? "text-center border-bottom border-dark border-opacity-50" : "text-center" }>
+                                  className={ (i + 1 < props.links.length) ? "text-start border-bottom border-dark border-opacity-50" : "text-start" }>
                        {link.name}
                    </Dropdown.Item>
         })}

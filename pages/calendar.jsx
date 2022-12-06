@@ -1,24 +1,46 @@
 import Title from '../components/title'
 import Section from '../components/section'
-import Alert from 'react-bootstrap/Alert'
 import WorkInProgress from '../components/work_in_progress'
+import { Row, Col, ListGroup } from 'react-bootstrap'
+import Image from 'next/image'
+import CalendarDayImg from '../public/calendar-day.svg'
 
 export default function Calendar() {
   return (
-    <div style={{minHeight: "90vh"}}>
-      <Section id="main">
-        <Title prefix="Calendar" />
+    <div>
+      <Title prefix="Calendar" />
 
-        <h1 className="text-center w-100 my-3">PHFIC Calendar</h1>
-      
-        <WorkInProgress name="Calendar Page WIP" />
+      <Section id="main" noMinHeight={true}>
+        <Row>
+          <Col xs={12}>
+            <h1 className="text-center w-100 my-5">PHFIC Calendar</h1>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col sm={6} className="text-center">
+            <h2 className="">Next: Office Hours</h2>
+            <h3 className=""><Image src={CalendarDayImg} alt="Calendar" height={100} width={100} /></h3>
+            <p>Please email <u className="text-blue">phfic@mitre.org</u> for Zoom link.</p>
+          </Col>
+          <Col sm={6} className="px-4 px-sm-5 py-4">
+            <ListGroup className="rounded shadow me-lg-5 me-md-3">
+              <ListGroup.Item variant="dark">Office Hours | <span className="text-end">Friday, Jan 13th 2022</span></ListGroup.Item>
+              <ListGroup.Item variant="dark">Steering Committee Meeting | <span className="text-end">TBA</span></ListGroup.Item>
+              <ListGroup.Item variant="dark">FHIR CDC Community of Practice | <span className="text-end">TBA</span></ListGroup.Item>
+            </ListGroup>
+          </Col>
+        </Row>
+
       </Section>
 
-      <Section id="office-hours"></Section>
+      <Section id="office-hours">
+        <WorkInProgress name="More PHFIC Events Coming Here Soon!" className="mt-5"/>
+      </Section>
 
-      <Section id="steering-committee"></Section>
+      <Section id="steering-committee" noMinHeight={true}></Section>
 
-      <Section id="cdc-fhir-cop"></Section>
+      <Section id="cdc-fhir-cop" noMinHeight={true}></Section>
 
       {/*
       <Section id="workshops"></Section>
