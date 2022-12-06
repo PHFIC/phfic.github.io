@@ -37,7 +37,7 @@ export default function Home() {
     <div>
       <Title prefix="Home" />
 
-      <Section id="landing" style={{overflow: "hidden", position: "relative"}}>
+      <Section id="landing" style={{overflow: "hidden", position: "relative"}} noMinHeight={true}>
         <Image
             src={HealthCover}
             alt="In the Realm of Public Health"
