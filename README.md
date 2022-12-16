@@ -1,6 +1,5 @@
 # PHFIC Website
-![Build Status](https://img.shields.io/github/workflow/status/phfic/phfic.github.io/nextjs.yml?branch=main)
-![Build Status](https://img.shields.io/github/actions/workflow/status/phfic/phfic.github.io/next.yml?branch=main)
+![Build Status](https://img.shields.io/github/actions/workflow/status/phfic/phfic.github.io/nextjs.yml?branch=main)
 ![GitHub Pages Status](https://img.shields.io/github/deployments/phfic/phfic.github.io/github-pages?color=blue&label=pages)
 ![Release Status](https://img.shields.io/badge/release-draft-red)
 
