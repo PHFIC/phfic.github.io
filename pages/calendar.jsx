@@ -1,6 +1,5 @@
 import Title from '../components/title'
 import Section from '../components/section'
-import WorkInProgress from '../components/work_in_progress'
 import { Row, Col, ListGroup } from 'react-bootstrap'
 import Image from 'next/image'
 import CalendarDayImg from '../public/calendar-day.svg'
@@ -33,24 +32,6 @@ export default function Calendar() {
         </Row>
 
       </Section>
-
-      <Section id="office-hours">
-        <WorkInProgress name="More PHFIC Events Coming Here Soon!" className="mt-5"/>
-      </Section>
-
-      <Section id="steering-committee" noMinHeight={true}></Section>
-
-      <Section id="cdc-fhir-cop" noMinHeight={true}></Section>
-
-      {/*
-      <Section id="workshops"></Section>
-
-      <Section id="conferences"></Section>
-
-      <Section id="meetings"></Section>
-
-      <Section id="community-events"></Section>
-      */}
 
     </div>
   )
