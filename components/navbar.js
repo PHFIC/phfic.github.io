@@ -2,7 +2,7 @@
 import {Nav, Navbar as BootstrapNavbar, NavDropdown as BootstrapNavDropdown, Container} from 'react-bootstrap'
 import NavDropdown from './nav_dropdown'
 import Image from 'next/image'
-import Logo from '../public/favicon.ico' // TODO: add logo
+import NavLogo from './nav_logo'
 
 
 export default function Navbar({ children }) {
@@ -54,45 +54,33 @@ export default function Navbar({ children }) {
 
   return (
     <>
-      <BootstrapNavbar expand="xl" bg="primary" variant="dark">
+      <BootstrapNavbar expand="xl" bg="secondary" variant="dark">
         <Container fluid>
 
-          {/* Logo */}
-          <BootstrapNavbar.Brand className="fs-3" href="/">
-            <Image
-                src={Logo}
-                alt={"Public Health FHIR® Implementation Collaborative"}
-                width={30}
-                height={30}
-                className="d-inline-block align-top"
-            />{' '}
+          <NavLogo />
 
-            PHFIC
+          <BootstrapNavbar.Toggle aria-controls="navbar-nav" />
+          <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
+            <Nav className="ms-auto fs-4" fill="true">
 
-          </BootstrapNavbar.Brand>
+              <Nav.Link className="text-light" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>
 
-        <BootstrapNavbar.Toggle aria-controls="navbar-nav" />
-        <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
-          <Nav className="ms-auto fs-4" fill="true">
+              <NavDropdown title="About" links={aboutLinks} />
 
-            <Nav.Link className="text-light" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>
+              <Nav.Link className="text-light" href="/calendar" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Calendar</Nav.Link>
 
-            <NavDropdown title="About" links={aboutLinks} />
+              <NavDropdown title="Playbook" links={playbookLinks} />
 
-            <Nav.Link className="text-light" href="/calendar" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Calendar</Nav.Link>
+              <Nav.Link className="text-light" href="/#offerings" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Services</Nav.Link>
 
-            <NavDropdown title="Playbook" links={playbookLinks} />
+              <Nav.Link className="text-light" href="/faq" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
 
-            <Nav.Link className="text-light" href="/#offerings" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Services</Nav.Link>
+              <Nav.Link className="text-light" href="/contact" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Contact</Nav.Link>
 
-            <Nav.Link className="text-light" href="/faq" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
+              <NavDropdown title="Quick Links" links={quickLinks} />
 
-            <Nav.Link className="text-light" href="/contact" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Contact</Nav.Link>
-
-            <NavDropdown title="Quick Links" links={quickLinks} />
-
-          </Nav>
-        </BootstrapNavbar.Collapse>
+            </Nav>
+          </BootstrapNavbar.Collapse>
 
         </Container>
       </BootstrapNavbar>
