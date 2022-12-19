@@ -1,6 +1,7 @@
 // components/title.js
 
 import Head from 'next/head'
+import Favicon from '../public/favicon.ico.svg'
 
 /* Component to define webpage title
  * USAGE:
@@ -25,7 +26,7 @@ export default function Title(props) {
     return <Head>
              <title key="title">{props.prefix + " | Public Health FHIR® Implementation Collaborative"}</title>
 
-             <link rel="icon" href="/public/favicon.ico.svg" />
+             <link rel="icon" href={Favicon} />
 
              <meta name="description" content="PHFIC (Public Health FHIR® Implementation Collaborative) is a community established in 2022 for improving public health data exchange." />
 
