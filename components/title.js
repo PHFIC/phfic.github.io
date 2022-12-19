@@ -1,8 +1,6 @@
 // components/title.js
 
 import Head from 'next/head'
-import Favicon from '../public/favicon.ico.svg'
-
 /* Component to define webpage title
  * USAGE:
  *  <Title prefix="My Page" />
@@ -25,8 +23,6 @@ export default function Title(props) {
     /* adding key='title' will tell NextJS to only render the last instance of <title> */
     return <Head>
              <title key="title">{props.prefix + " | Public Health FHIR® Implementation Collaborative"}</title>
-
-             <link rel="icon" href={Favicon} />
 
              <meta name="description" content="PHFIC (Public Health FHIR® Implementation Collaborative) is a community established in 2022 for improving public health data exchange." />
 
