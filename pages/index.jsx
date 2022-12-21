@@ -19,15 +19,15 @@ export default function Home() {
         <Row className="justify-content-between h-100">
           <Col md={7} className="text-center py-5">
             <h1 className="d-none">Public Health FHIR&reg; Implementation Collaborative</h1>
-            <div className="position-relative w-100 h-100">
+            <div className="position-relative w-100" style={{height: "40vh"}}>
               <Image src={LogoImg}
                      alt="PHFIC | Public Health FHIR&reg; Implementation Collaborative"
                      priority
                      fill
               />
             </div>
-            <hr className="d-inline-block bg-primary opacity-100 border border-0" style={{height: '10px', width: '80%'}}/>
-            <h3 className="">Promoting Public Health Data Exchange for the Modern Age</h3>
+            <hr className="d-none d-lg-inline-block bg-primary opacity-100 border border-0" style={{height: '10px', width: '80%'}}/>
+            <h3 className="d-none d-lg-block">Promoting Public Health Data Exchange for the Modern Age</h3>
           </Col>
           <Col md={4} className="d-flex align-items-center">
             <Container fluid style={{height: "min-content"}}>
@@ -38,12 +38,12 @@ export default function Home() {
               </Row>
               <Row className="justify-content-center my-3">
                 <Col xs={10} md={9} className="my-md-3 my-xs-5">
-                  <a href="/playbook/TODO" className="btn btn-lg btn-secondary d-block">Starting FHIR-Ready Organizations</a>
+                  <a href="/playbook/TODO" className="btn btn-lg d-block" style={{backgroundColor: "var(--bs-blue)"}}>Starting FHIR-Ready Organizations</a>
                 </Col>
               </Row>
               <Row className="justify-content-center my-3">
                 <Col xs={10} md={9} className="my-md-3 my-xs-5">
-                  <a href="/playbook/TODO" className="btn btn-lg btn-info d-block">Implementing FHIR</a>
+                  <a href="/playbook/TODO" className="btn btn-lg d-block" style={{backgroundColor: "var(--bs-indigo)"}}>Implementing FHIR</a>
                 </Col>
               </Row>
             </Container>
