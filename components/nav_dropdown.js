@@ -21,13 +21,13 @@ export default function NavDropdown(props) {
   }
 
   return (
-    <Dropdown as={NavItem} onMouseEnter={boldenText} onMouseLeave={normalizeText}>
-      <Dropdown.Toggle as={NavLink} className={bold ? "text-light fw-bold" : "text-light"}>{props.title}</Dropdown.Toggle>
-      <Dropdown.Menu className="bg-primary shadow-sm" variant="dark" align="end">
+    <Dropdown as={NavItem} onMouseEnter={boldenText} onMouseLeave={normalizeText} className="max-width:95vw;">
+      <Dropdown.Toggle as={NavLink} className={bold ? "text-dark fw-bold" : "text-dark"}>{props.title}</Dropdown.Toggle>
+      <Dropdown.Menu className="bg-secondary" variant="light" align="end">
         {props.links.map(function(link, i) {
             return <Dropdown.Item as={NavLink} key={link.url} href={link.url}
                                   target={link.external ? '_blank' : '_self' }
-                                  className={ (i + 1 < props.links.length) ? "text-start border-bottom border-dark border-opacity-50" : "text-start" }>
+                                  className={ (i + 1 < props.links.length) ? "text-center text-lg-start text-wrap border-bottom border-dark border-opacity-50" : "text-center text-lg-start text-wrap" }>
                        {link.name}
                    </Dropdown.Item>
         })}

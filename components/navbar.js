@@ -63,19 +63,19 @@ export default function Navbar({ children }) {
           <BootstrapNavbar.Collapse id="navbar-nav" className="text-dark">
             <Nav className="ms-auto fs-4" fill="true">
 
-              <Nav.Link className="text-light" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>
+              <Nav.Link className="text-dark" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>
 
               <NavDropdown title="About" links={aboutLinks} />
 
-              <Nav.Link className="text-light" href="/calendar" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Calendar</Nav.Link>
+              <Nav.Link className="text-dark" href="/calendar" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Calendar</Nav.Link>
 
               <NavDropdown title="Playbook" links={playbookLinks} />
 
-              <Nav.Link className="text-light" href="/#offerings" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Services</Nav.Link>
+              <Nav.Link className="text-dark" href="/#offerings" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Services</Nav.Link>
 
-              <Nav.Link className="text-light" href="/faq" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
+              <Nav.Link className="text-dark" href="/faq" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
 
-              <Nav.Link className="text-light" href="/contact" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Contact</Nav.Link>
+              <Nav.Link className="text-dark" href="/contact" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Contact</Nav.Link>
 
               <NavDropdown title="Quick Links" links={quickLinks} />
 
