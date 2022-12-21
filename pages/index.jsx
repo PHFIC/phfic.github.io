@@ -2,6 +2,7 @@
 
 import Title from '../components/title'
 import Section from '../components/section'
+import SpacedStack from '../components/spaced_stack'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import Image from 'next/image'
 
@@ -30,23 +31,7 @@ export default function Home() {
             <h3 className="d-none d-lg-block">Promoting Public Health Data Exchange for the Modern Age</h3>
           </Col>
           <Col md={4} className="d-flex align-items-center">
-            <Container fluid style={{height: "min-content"}}>
-              <Row className="justify-content-center my-3">
-                <Col xs={10} md={9} className="my-md-3 my-xs-5">
-                  <a href="/playbook/TODO" className="btn btn-lg btn-primary d-block text-light">What is FHIR?</a>
-                </Col>
-              </Row>
-              <Row className="justify-content-center my-3">
-                <Col xs={10} md={9} className="my-md-3 my-xs-5">
-                  <a href="/playbook/TODO" className="btn btn-lg d-block text-light" style={{backgroundColor: "var(--bs-blue)"}}>Starting FHIR-Ready Organizations</a>
-                </Col>
-              </Row>
-              <Row className="justify-content-center my-3">
-                <Col xs={10} md={9} className="my-md-3 my-xs-5">
-                  <a href="/playbook/TODO" className="btn btn-lg d-block text-light" style={{backgroundColor: "var(--bs-indigo)"}}>Implementing FHIR</a>
-                </Col>
-              </Row>
-            </Container>
+            <SpacedStack />
           </Col>
         </Row>
       </Container>
