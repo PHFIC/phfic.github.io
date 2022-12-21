@@ -54,13 +54,13 @@ export default function Navbar({ children }) {
 
   return (
     <>
-      <BootstrapNavbar expand="xl" bg="secondary" variant="dark">
+      <BootstrapNavbar expand="xl" bg="secondary" variant="light">
         <Container fluid>
 
           <NavLogo />
 
           <BootstrapNavbar.Toggle aria-controls="navbar-nav" />
-          <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
+          <BootstrapNavbar.Collapse id="navbar-nav" className="text-dark">
             <Nav className="ms-auto fs-4" fill="true">
 
               <Nav.Link className="text-light" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>

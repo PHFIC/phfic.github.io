@@ -16,20 +16,38 @@ export default function Home() {
       <Title prefix="Home" />
 
       <Container fluid id="landing" style={{minHeight: "80vh"}}>
-        <Row>
-          <Col md={8} className="text-center py-5">
+        <Row className="justify-content-between h-100">
+          <Col md={7} className="text-center py-5">
             <h1 className="d-none">Public Health FHIR&reg; Implementation Collaborative</h1>
-            <Image src={LogoImg}
-                   width={1000}
-                   height="auto"
-                   alt="PHFIC | Public Health FHIR&reg; Implementation Collaborative"
-                   priority
-                   style={{objectFit: 'scale-down'}}
-            />
-            <hr className="d-inline-block bg-primary opacity-100 border border-0" style={{height: '10px', width: '1000px'}}/>
-            <h2 className="">Promoting Public Health Data Exchange for the Modern Age</h2>
+            <div className="position-relative w-100 h-100">
+              <Image src={LogoImg}
+                     alt="PHFIC | Public Health FHIR&reg; Implementation Collaborative"
+                     priority
+                     fill
+              />
+            </div>
+            <hr className="d-inline-block bg-primary opacity-100 border border-0" style={{height: '10px', width: '80%'}}/>
+            <h3 className="">Promoting Public Health Data Exchange for the Modern Age</h3>
           </Col>
-          <Col md={4}></Col>
+          <Col md={4} className="d-flex align-items-center">
+            <Container fluid style={{height: "min-content"}}>
+              <Row className="justify-content-center my-3">
+                <Col xs={10} md={9} className="my-md-3 my-xs-5">
+                  <a href="/playbook/TODO" className="btn btn-lg btn-primary d-block">What is FHIR?</a>
+                </Col>
+              </Row>
+              <Row className="justify-content-center my-3">
+                <Col xs={10} md={9} className="my-md-3 my-xs-5">
+                  <a href="/playbook/TODO" className="btn btn-lg btn-secondary d-block">Starting FHIR-Ready Organizations</a>
+                </Col>
+              </Row>
+              <Row className="justify-content-center my-3">
+                <Col xs={10} md={9} className="my-md-3 my-xs-5">
+                  <a href="/playbook/TODO" className="btn btn-lg btn-info d-block">Implementing FHIR</a>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
         </Row>
       </Container>
 
