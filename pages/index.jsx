@@ -51,7 +51,24 @@ export default function Home() {
         </Row>
       </Container>
 
-      <Section id="value-props" debug={true}> </Section>
+      <Container fluid id="value-props" style={{height: "80vh"}}>
+        <Row>
+            <h1>The Value Proposition of FHIR&reg;</h1>
+        </Row>
+
+          <Row id="value-prop1" style={{height:"100%"}} data-aos="fade-in">
+            <h2>FHIR helps</h2>
+          </Row>
+          <Row id="value-prop2" style={{height:"100%"}} data-aos="fade-right">
+            <h2>FHIR also...</h2>
+          </Row>
+          <Row id="value-prop3" style={{height:"100%"}} data-aos="fade-left">
+            <h2>And thus...</h2>
+          </Row>
+
+      </Container>
+
+
       <Section id="offerings" debug={true}> </Section>
       <Section id="engage" debug={true}> </Section>
 

@@ -9,6 +9,7 @@
     "cypress": "cypress open"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.2",
     "next": "latest",
     "react": "^18.2.0",
