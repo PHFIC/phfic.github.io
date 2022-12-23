@@ -2,7 +2,7 @@
 
 import Title from '../components/title'
 import Section from '../components/section'
-import SpacedStack from '../components/spaced_stack'
+import ButtonStack from '../components/button_stack'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import Image from 'next/image'
 
@@ -31,25 +31,29 @@ export default function Home() {
             <h3 className="d-none d-lg-block">Promoting Public Health Data Exchange for the Modern Age</h3>
           </Col>
           <Col md={4} className="d-flex align-items-center">
-            <SpacedStack />
+            <ButtonStack buttons={[
+                {key: "stackBtn1", path: "/playbook/TODO", color: "var(--bs-primary)", name: "What is FHIR?"},
+                {key: "stackBtn2", path: "/playbook/TODO", color: "var(--bs-blue)", name: "Starting FHIR-Ready Organizations"},
+                {key: "stackBtn3", path: "/playbook/TODO", color: "var(--bs-indigo)", name: "Implementing FHIR"}
+            ]}/>
           </Col>
         </Row>
       </Container>
 
-      <Container fluid id="value-props" style={{height: "80vh"}}>
+      <Container fluid id="value-props" style={{minHeight: "80vh"}}>
         <Row>
             <h1>The Value Proposition of FHIR&reg;</h1>
         </Row>
 
-          <Row id="value-prop1" style={{height:"100%"}} data-aos="fade-in">
+        <Row id="value-prop1" style={{height:"100%"}}> {/* TODO animate on scroll */}
             <h2>FHIR helps</h2>
-          </Row>
-          <Row id="value-prop2" style={{height:"100%"}} data-aos="fade-right">
+        </Row>
+        <Row id="value-prop2" style={{height:"100%"}}>
             <h2>FHIR also...</h2>
-          </Row>
-          <Row id="value-prop3" style={{height:"100%"}} data-aos="fade-left">
+        </Row>
+        <Row id="value-prop3" style={{height:"100%"}}>
             <h2>And thus...</h2>
-          </Row>
+        </Row>
 
       </Container>
 
