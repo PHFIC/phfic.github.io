@@ -4,12 +4,14 @@ import Title from '../components/title'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import ButtonStack from '../components/button_stack'
 import LandingLogo from '../components/landing_logo'
+import SplitContainer from '../components/split_container'
 
 import Section from '../components/section'
 import Image from 'next/image'
 
 // image imports
 import Logo from '../public/PHFIC_Secondary_COL.svg'
+import Placeholder from '../public/Placeholder.png'
 
 // view logic + content
 export default function Home() {
@@ -36,21 +38,22 @@ export default function Home() {
         </Row>
       </Container>
 
-      <Container fluid id="value-props" style={{minHeight: "80vh"}}>
+      <Container fluid id="value-props" className="my-5 mx-3" style={{minHeight: "80vh"}}>
         <Row>
-            <h1>The Value Proposition of FHIR&reg;</h1>
+            <h1 className="display-2">The Value Proposition of FHIR&reg;</h1>
         </Row>
-
-        <Row id="value-prop1" style={{height:"100%"}}> {/* TODO animate on scroll */}
-            <h2>FHIR helps</h2>
+        <Row>
+          <Col xs={12}>
+            <SplitContainer left={
+                <h1 className="ms-5">Value Prop 1</h1>
+            }
+            right={
+                <Image src={Placeholder} alt="placeholder image" width={500} height="auto" className="m-5"/>
+            } />
+            {/* <SplitContainer left={} right={} />
+            <SplitContainer left={} right={} /> */}
+          </Col>
         </Row>
-        <Row id="value-prop2" style={{height:"100%"}}>
-            <h2>FHIR also...</h2>
-        </Row>
-        <Row id="value-prop3" style={{height:"100%"}}>
-            <h2>And thus...</h2>
-        </Row>
-
       </Container>
 
 
