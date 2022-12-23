@@ -4,7 +4,7 @@ import Title from '../components/title'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import ButtonStack from '../components/button_stack'
 import LandingLogo from '../components/landing_logo'
-import SplitContainer from '../components/split_container'
+import SplitPane from '../components/split_pane'
 
 import Section from '../components/section'
 import Image from 'next/image'
@@ -38,20 +38,34 @@ export default function Home() {
         </Row>
       </Container>
 
-      <Container fluid id="value-props" className="my-5 mx-3" style={{minHeight: "80vh"}}>
+      <Container fluid id="value-props" className="my-5 mx-lg-3 mx-md-1" style={{minHeight: "80vh"}}>
         <Row>
-            <h1 className="display-2">The Value Proposition of FHIR&reg;</h1>
+            <h1 className="display-2">Why FHIR&reg; can help Public Health:</h1>
         </Row>
         <Row>
           <Col xs={12}>
-            <SplitContainer left={
-                <h1 className="ms-5">Value Prop 1</h1>
-            }
-            right={
-                <Image src={Placeholder} alt="placeholder image" width={500} height="auto" className="m-5"/>
-            } />
-            {/* <SplitContainer left={} right={} />
-            <SplitContainer left={} right={} /> */}
+            <SplitPane
+                text="Lack of data interoperability between public health systems poses a major threat to the health of the American people - FHIR presents a path forward for mitigating this challenge."
+                subtext="See our Value Proposition in the FAQ"
+                path="#TODO"
+                img={Placeholder}
+                alt="Healthcare Interoperability Image"
+            />
+            <SplitPane
+                text="In recent years, the policy environment has caught up with the pace of industry in health information technology advances."
+                subtext="See 21st Century Cares Act"
+                path="https://www.himss.org/resources/21st-century-cures-act-part-two-information-blocking-and-interoperability"
+                img={Placeholder}
+                alt="Law Image"
+                reverse
+            />
+            <SplitPane
+                text="Broad adoption of FHIR represents an unprecedented opportunity for public health to access a growing set of standardized data in EHRs without custom integrations."
+                subtext="See Developer's FHIR 4.3.0 Standard"
+                path="http://hl7.org/fhir/"
+                img={Placeholder}
+                alt="API and Standards Image"
+            />
           </Col>
         </Row>
       </Container>
