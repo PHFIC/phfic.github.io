@@ -4,6 +4,7 @@ import Title from '../components/title'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import ButtonStack from '../components/button_stack'
 import LandingLogo from '../components/landing_logo'
+import SplitContainer from '../components/split_container'
 import SplitPane from '../components/split_pane'
 import QuadPane from '../components/quad_pane'
 import OverlayCard from '../components/overlay_card'
@@ -73,7 +74,7 @@ export default function Home() {
       </Container>
 
       <div id="offerings">
-        <h1 style={{position:"fixed", zIndex:1, top:0, marginTop:"-10px", left:"50%", marginLeft:"-10px", backgroundColor:"var(--bs-secondary)"}}>
+        <h1 style={{position:"relative", zIndex:1, top:0, marginTop:"-10px", left:"50%", marginLeft:"-10px", backgroundColor:"var(--bs-secondary)"}}>
             Offerings
         </h1>
         <QuadPane
@@ -111,7 +112,17 @@ export default function Home() {
         />
       </div>
 
-      <Section id="engage" debug={true}> </Section>
+      <div id="engage" className="bg-secondary">
+        <SplitContainer
+            height="85vh"
+            left={
+                <h1>Engage with PHFIC</h1>
+            }
+            right={
+                <h3>...</h3>
+            }
+        />
+      </div>
 
     </div>
   )
