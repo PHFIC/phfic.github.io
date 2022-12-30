@@ -18,7 +18,7 @@ export default function SplitPane(props) {
 
 
   return (
-    <Container fluid>
+    <Container fluid className="my-5">
       <Row className={rowClass}>
         <Col className="my-auto px-lg-5 px-md-2 px-1">
           <h1 className={textClass}>{props.text}</h1>
