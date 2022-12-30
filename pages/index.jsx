@@ -74,9 +74,13 @@ export default function Home() {
       </Container>
 
       <div id="offerings">
-        <h1 style={{position:"relative", zIndex:1, top:0, marginTop:"-10px", left:"50%", marginLeft:"-10px", backgroundColor:"var(--bs-secondary)"}}>
-            Offerings
-        </h1>
+        <Container fluid className="position-relative g-0" style={{zIndex: "10"}}>
+          <Row className="justify-content-center">
+            <Col className="my-auto text-center" xs="auto">
+                <h1 className="bg-secondary py-3 px-5" style={{marginBottom: "-25px"}}>Offerings</h1>
+            </Col>
+          </Row>
+        </Container>
         <QuadPane
             farLeft = {
                 <OverlayCard

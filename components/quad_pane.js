@@ -15,7 +15,7 @@ export default function QuadPane(props) {
   const colClass = "text-center my-auto h-100";
 
   return (
-    <Container fluid className="my-5 px-0" style={{minHeight: "85vh"}}>
+    <Container fluid className="px-0" style={{minHeight: "85vh"}}>
       <Row className={rowClass} >
         <Col className={colClass}>
           {props.farLeft}
