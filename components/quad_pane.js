@@ -11,12 +11,12 @@ import { Container, Row, Col } from 'react-bootstrap'
  */
 export default function QuadPane(props) {
 
-  const rowClass = "row-cols-2 row-cols-lg-4 justify-content-around";
-  const colClass = "text-center my-auto px-5";
+  const rowClass = "row-cols-2 row-cols-lg-4 justify-content-around g-0";
+  const colClass = "text-center my-auto h-100";
 
   return (
-    <Container fluid className="my-5">
-      <Row className={rowClass} style={{minHeight: "85vh"}}>
+    <Container fluid className="my-5 px-0" style={{minHeight: "85vh"}}>
+      <Row className={rowClass} >
         <Col className={colClass}>
           {props.farLeft}
         </Col>

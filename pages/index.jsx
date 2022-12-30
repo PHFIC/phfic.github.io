@@ -6,6 +6,7 @@ import ButtonStack from '../components/button_stack'
 import LandingLogo from '../components/landing_logo'
 import SplitPane from '../components/split_pane'
 import QuadPane from '../components/quad_pane'
+import OverlayCard from '../components/overlay_card'
 
 import Section from '../components/section'
 import Image from 'next/image'
@@ -72,18 +73,40 @@ export default function Home() {
       </Container>
 
       <div id="offerings">
+        <h1 style={{position:"fixed", zIndex:1, top:0, marginTop:"-10px", left:"50%", marginLeft:"-10px", backgroundColor:"var(--bs-secondary)"}}>
+            Offerings
+        </h1>
         <QuadPane
             farLeft = {
-                <h2>Office Hours</h2>
+                <OverlayCard
+                    title="Office Hours"
+                    img={Placeholder}
+                    alt="Office Hours Image"
+                />
             }
             midLeft = {
-                <h2>FHIR&reg; Public Health Playbook</h2>
+                <OverlayCard
+                    title="FHIR Public Health Playbook"
+                    img={Placeholder}
+                    alt="Playbook Image"
+
+                />
             }
             midRight = {
-                <h2>Advisory Services</h2>
+                <OverlayCard
+                    title="Advisory Services"
+                    img={Placeholder}
+                    alt="Advisory Image"
+
+                />
             }
             farRight = {
-                <h2>Training Materials Coming Soon!</h2>
+                <OverlayCard
+                    title="Training Materials Coming Soon!"
+                    img={Placeholder}
+                    alt="Traning Materials Image"
+
+                />
             }
         />
       </div>
