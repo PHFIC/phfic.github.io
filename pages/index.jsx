@@ -8,6 +8,7 @@ import SplitContainer from '../components/split_container'
 import SplitPane from '../components/split_pane'
 import QuadPane from '../components/quad_pane'
 import OverlayCard from '../components/overlay_card'
+import LinkList from '../components/link_list'
 
 import Section from '../components/section'
 import Image from 'next/image'
@@ -120,10 +121,14 @@ export default function Home() {
         <SplitContainer
             height="85vh"
             left={
-                <h1>Engage with PHFIC</h1>
+                <h1>How you can engage with PHFIC</h1>
             }
             right={
-                <h3>...</h3>
+                <LinkList id="engageLinks" links={[
+                    {href: "#TODO", text: "View our Calendar"},
+                    {href: "#TODO", text: "Join PHFIC Community"},
+                    {href: "#TODO", text: "Provide Feedback"}
+                ]} />
             }
         />
       </div>
