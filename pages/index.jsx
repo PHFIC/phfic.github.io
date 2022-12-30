@@ -48,7 +48,7 @@ export default function Home() {
             <SplitPane
                 text="Lack of data interoperability between public health systems poses a major threat to the health of the American people - FHIR presents a path forward for mitigating this challenge."
                 subtext="See our Value Proposition in the FAQ"
-                path="#TODO"
+                path="https://mitre.box.com/s/alviiay7as5gtmuk9j2sb723gxdp5434"
                 img={Placeholder}
                 alt="Healthcare Interoperability Image"
             />
