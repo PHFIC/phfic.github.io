@@ -5,6 +5,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import ButtonStack from '../components/button_stack'
 import LandingLogo from '../components/landing_logo'
 import SplitPane from '../components/split_pane'
+import QuadPane from '../components/quad_pane'
 
 import Section from '../components/section'
 import Image from 'next/image'
@@ -70,8 +71,23 @@ export default function Home() {
         </Row>
       </Container>
 
+      <div id="offerings">
+        <QuadPane
+            farLeft = {
+                
+            }
+            midLeft = {
 
-      <Section id="offerings" debug={true}> </Section>
+            }
+            midRight = {
+
+            }
+            farRight = {
+
+            }
+        />
+      </div>
+
       <Section id="engage" debug={true}> </Section>
 
     </div>
