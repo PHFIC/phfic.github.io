@@ -74,16 +74,16 @@ export default function Home() {
       <div id="offerings">
         <QuadPane
             farLeft = {
-                
+                <h2>Office Hours</h2>
             }
             midLeft = {
-
+                <h2>FHIR&reg; Public Health Playbook</h2>
             }
             midRight = {
-
+                <h2>Advisory Services</h2>
             }
             farRight = {
-
+                <h2>Training Materials Coming Soon!</h2>
             }
         />
       </div>
