@@ -3,7 +3,8 @@ import Section from '../components/section'
 import WorkInProgress from '../components/work_in_progress'
 import {Container, Row, Col, Button} from 'react-bootstrap'
 
-export default function Calendar() {
+/* TODO: consider replacing with direct link, or making full webformat page */
+export default function Faq() {
   return (
     <div style={{minHeight: "90vh"}}>
       <Title prefix="FAQ" />

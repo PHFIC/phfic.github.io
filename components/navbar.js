@@ -2,19 +2,8 @@
 import {Nav, Navbar as BootstrapNavbar, NavDropdown as BootstrapNavDropdown, Container} from 'react-bootstrap'
 import NavDropdown from './nav_dropdown'
 import Image from 'next/image'
-import Logo from '../public/favicon.ico'
+import NavLogo from './nav_logo'
 
-/* Navbar structure:
- * -----------------
- * home -> /
- * about (dropdown) -> /#(section-id)
- * calendar (dropdown) -> /calendar#(section-id)
- * playbook (dropdown) -> playbook site on external codebase
- * join phfic (dropdown) -> /join#(section-id)
- * resources (technical services dropdown) -> /techincal_services
- * resources (all other dropdown options) -> /resources#(section_id)
- * quick links (dropdown) -> various external links
- */
 
 export default function Navbar({ children }) {
 
@@ -26,24 +15,13 @@ export default function Navbar({ children }) {
 
   /* website navigation logic */
   const aboutLinks = [
-    {url: "/#about", name: "About PHFIC"},
-    {url: "/#vision", name: "Vision"},
-    {url: "/#collaborative-structure", name: 'Collaborative Structure'},
-    {url: "/#spotlight", name: 'Spotlight'},
-    {url: "/#pilot-site-map", name: 'Pilot Site Map'}
+    {url: "/about#mission-statement", name: "Mission Statement"},
+    {url: "/about#steering-committee", name: 'Steering Committee'},
+    {url: "/about#collaborative-structure", name: 'Collaborative Structure'},
+    {url: "/about#related", name: 'Related Groups'}
   ]
 
-  const calendarLinks = [
-    {url: "/calendar", name: "Calendar"},
-    {url: "/calendar#office-hours", name: "Office Hours"},
-    {url: "/calendar#steering-committee", name: "Steering Committee"},
-    {url: "/calendar#cdc-fhir-cop", name: "CDC FHIR Community of Practice"} //,
-    /* {url: "/calendar#workshops", name: "Workshops & Trainings"}, */
-    /* {url: "/calendar#conferences", name: "Conferences"}, */
-    /* {url: "/calendar#meetings", name: "Events/Meetings"}, */
-    /* {url: "/calendar#events", name: "Community Events"} */
-  ]
-
+  {/* TODO: update after playbook */}
   const playbookLinks = [
     {url: "/playbook", name: "Open Web Version"},
     {url: "/playbook/introduction", name: "Chapter 1. Introduction"},
@@ -58,37 +36,11 @@ export default function Navbar({ children }) {
   ];
 
 
-  const servicesLinks = [
-    {url: "/services", name: "Overview"},
-    {url: "/services#office-hours", name: "Office Hours"},
-    /* {url: "/services#workshops", name: "Workshops"}, */
-    {url: "/resources", name: "Resources"},
-    /* {url: "/resources#trainings", name: "Trainings"} */
-  ]
-
-  const joinLinks = [
-    {url: "/join", name: "Join PHFIC"},
-    {url: "/join#cdc-fhir-cop", name: "Join CDC FHIR Community of Practice"},
-    /* {url: "/join#subcommittees", name: "Join Subcommittees"}, */
-    /* {url: "/join#communicate", name: "Communicate with Community"} */
-  ]
-
   const quickLinks = [
-    {url: "/join", name: "Join PHFIC"},
-    {url: "mailto:phfic@mitre.org", name: "Email PHFIC"}, /* TODO: trigger modal popup? new page? */
-    {url: "/calendar", name: "PHFIC Calendar"},
-    {url: "https://forms.office.com/g/LtdTUPcVem", name: "Questions & Advisory Requests " + nearr, external: true},
-    /* {url: "/404#1", name: "PHFIC Knowledge Repository"}, */
-    {url: "/services", name: "PHFIC Advisory Services"},
-    {url: "/resources", name: "PHFIC Resources"},
-    /* {url: "https://www.cdc.gov/csels/phio/it_takes_practice.html", name: "FHIR CoP Newsletter"}, TODO: this may exist as an http link... */
-    /* {url: "/404#2", name: "Submit Topic for CoP Newsletter"}, */
-    /* {url: "/404#3", name: "Submit Content for Knowledge Repository"}, */
-    {url: "https://www.cdc.gov/surveillance/pubs-resources/dmi-summary/overview-hl7.html", name: "CDC FHIR " + nearr, external: true},
-    {url: "https://www.cdcfoundation.org/standardized-data-public-health", name: "CDC Foundation " + nearr, external: true},
-    {url: "https://confluence.hl7.org/display/PH/Helios+FHIR+Accelerator+for+Public+Health+Home", name: "Helios " + nearr, external: true},
-    {url: "https://www.cdc.gov/nchs/nvss/modernization/cop.htm", name: "NVSS FHIR CoP " + nearr, external: true},
-    {url: "https://forms.office.com/g/TB5ddmfR5d", name: "Give us Feedback " + nearr, external: true}
+    {url: "https://forms.office.com/g/LtdTUPcVem", name: "Request Advisory Service" + nearr, external: true},
+    {url: "/join", name: "Join PHFIC"}, /*TODO: join form*/
+    {url: "https://forms.office.com/g/TB5ddmfR5d", name: "Provide Feedback " + nearr, external: true}
+    /* TODO: playbbook links */
   ]
 
   /* helper functions */
@@ -102,45 +54,33 @@ export default function Navbar({ children }) {
 
   return (
     <>
-      <BootstrapNavbar expand="xl" bg="primary" variant="dark">
+      <BootstrapNavbar expand="xl" bg="secondary" variant="light">
         <Container fluid>
 
-          {/* Logo */}
-          <BootstrapNavbar.Brand className="fs-3" href="/">
-            <Image
-                src={Logo}
-                alt={"Public Health FHIR® Implementation Collaborative"}
-                width={30}
-                height={30}
-                className="d-inline-block align-top"
-            />{' '}
+          <NavLogo />
 
-            PHFIC
+          <BootstrapNavbar.Toggle aria-controls="navbar-nav" />
+          <BootstrapNavbar.Collapse id="navbar-nav" className="text-dark">
+            <Nav className="ms-auto fs-4" fill="true">
 
-          </BootstrapNavbar.Brand>
+              <Nav.Link className="text-dark" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>
 
-        <BootstrapNavbar.Toggle aria-controls="navbar-nav" />
-        <BootstrapNavbar.Collapse id="navbar-nav" className="text-light">
-          <Nav className="ms-auto fs-4" fill="true">
+              <NavDropdown title="About" links={aboutLinks} />
 
-            <Nav.Link className="text-light" href="/" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Home</Nav.Link>
+              <Nav.Link className="text-dark" href="/calendar" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Calendar</Nav.Link>
 
-            <NavDropdown title="About" links={aboutLinks} />
+              <NavDropdown title="Playbook" links={playbookLinks} />
 
-            <NavDropdown title="Calendar" links={calendarLinks} />
+              <Nav.Link className="text-dark" href="/#offerings" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Services</Nav.Link>
 
-            <NavDropdown title="Playbook" links={playbookLinks} />
+              <Nav.Link className="text-dark" href="https://mitre.box.com/s/alviiay7as5gtmuk9j2sb723gxdp5434" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
 
-            <NavDropdown title="Advisory Services" links={servicesLinks} />
+              <Nav.Link className="text-dark" href="/contact" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Contact</Nav.Link>
 
-            <Nav.Link className="text-light" href="/faq" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
+              <NavDropdown title="Quick Links" links={quickLinks} />
 
-            <NavDropdown title="Join Us" links={joinLinks} />
-
-            <NavDropdown title="Quick Links" links={quickLinks} />
-
-          </Nav>
-        </BootstrapNavbar.Collapse>
+            </Nav>
+          </BootstrapNavbar.Collapse>
 
         </Container>
       </BootstrapNavbar>

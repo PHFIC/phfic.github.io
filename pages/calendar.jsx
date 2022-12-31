@@ -1,6 +1,5 @@
 import Title from '../components/title'
 import Section from '../components/section'
-import WorkInProgress from '../components/work_in_progress'
 import { Row, Col, ListGroup } from 'react-bootstrap'
 import Image from 'next/image'
 import CalendarDayImg from '../public/calendar-day.svg'
@@ -10,7 +9,7 @@ export default function Calendar() {
     <div>
       <Title prefix="Calendar" />
 
-      <Section id="main" noMinHeight={true}>
+      <Section id="main">
         <Row>
           <Col xs={12}>
             <h1 className="text-center w-100 my-5">PHFIC Calendar</h1>
@@ -24,33 +23,15 @@ export default function Calendar() {
             <p>Please email <u className="text-blue">phfic@mitre.org</u> for Zoom link.</p>
           </Col>
           <Col sm={6} className="px-4 px-sm-5 py-4">
-            <ListGroup className="rounded shadow me-lg-5 me-md-3">
-              <ListGroup.Item variant="dark">Office Hours | <span className="text-end">Friday, Jan 13th 2022</span></ListGroup.Item>
-              <ListGroup.Item variant="dark">Steering Committee Meeting | <span className="text-end">TBA</span></ListGroup.Item>
-              <ListGroup.Item variant="dark">FHIR CDC Community of Practice | <span className="text-end">TBA</span></ListGroup.Item>
+            <ListGroup className="me-lg-5 me-md-3">
+              <ListGroup.Item variant="light">Office Hours | <span className="text-end">Friday, Jan 13th 2022</span></ListGroup.Item>
+              <ListGroup.Item variant="light">Steering Committee Meeting | <span className="text-end">TBA</span></ListGroup.Item>
+              <ListGroup.Item variant="light">FHIR CDC Community of Practice | <span className="text-end">TBA</span></ListGroup.Item>
             </ListGroup>
           </Col>
         </Row>
 
       </Section>
-
-      <Section id="office-hours">
-        <WorkInProgress name="More PHFIC Events Coming Here Soon!" className="mt-5"/>
-      </Section>
-
-      <Section id="steering-committee" noMinHeight={true}></Section>
-
-      <Section id="cdc-fhir-cop" noMinHeight={true}></Section>
-
-      {/*
-      <Section id="workshops"></Section>
-
-      <Section id="conferences"></Section>
-
-      <Section id="meetings"></Section>
-
-      <Section id="community-events"></Section>
-      */}
 
     </div>
   )
