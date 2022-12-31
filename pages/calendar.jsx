@@ -9,7 +9,7 @@ export default function Calendar() {
     <div>
       <Title prefix="Calendar" />
 
-      <Section id="main" noMinHeight={true}>
+      <Section id="main">
         <Row>
           <Col xs={12}>
             <h1 className="text-center w-100 my-5">PHFIC Calendar</h1>
