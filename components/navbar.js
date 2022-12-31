@@ -73,7 +73,7 @@ export default function Navbar({ children }) {
 
               <Nav.Link className="text-dark" href="/#offerings" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Services</Nav.Link>
 
-              <Nav.Link className="text-dark" href="/faq" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
+              <Nav.Link className="text-dark" href="https://mitre.box.com/s/alviiay7as5gtmuk9j2sb723gxdp5434" onMouseEnter={Bolden} onMouseLeave={Unbolden}>FAQ</Nav.Link>
 
               <Nav.Link className="text-dark" href="/contact" onMouseEnter={Bolden} onMouseLeave={Unbolden}>Contact</Nav.Link>
 
