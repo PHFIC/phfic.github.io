@@ -9,12 +9,11 @@ import Placeholder from '../public/Placeholder.png'
 export default function Bio(props) {
 
     return (
-      <Card className="border-0 mx-3">
-        <Image className="card-img" src={props.img} alt={props.alt} fill />
+      <Card className="border-0 mx-5">
+        <Image className="card-img-top position-relative" style={{minHeight:"200px"}} src={props.img} alt={props.alt} fill />
         <Card.Body>
           <Card.Text className="text-center">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            {props.text}
           </Card.Text>
         </Card.Body>
       </Card>

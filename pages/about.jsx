@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Title from '../components/title'
 import SplitContainer from '../components/split_container'
 import QuadPane from '../components/quad_pane'
+import Bio from '../components/bio'
 
 // image imports
 import Placeholder from '../public/Placeholder.png'
@@ -56,12 +57,49 @@ export default function About() {
       </div>
       <div id="steering-committee">
         <h1 className="w-100 text-center py-5">Our Steering Committee</h1>
+        <Container>
+            <Row className="row-cols-xs-1 row-cols-sm-2 row-cols-lg-4">
+                <Col>
+                    <Bio img={Placeholder} alt="..." text="Seth Folly, MD, MPH"/>
+                </Col>
+                <Col>
+                    <Bio img={Placeholder} alt="..." text="Kate Goodin, MPH, MS"/>
 
+                </Col>
+                <Col>
+                    <Bio img={Placeholder} alt="..." text="Bryant Thomas, MD"/>
+                </Col>
+                <Col>
+                    <Bio img={Placeholder} alt="..." text="Christine Stewart, MPH"/>
+                </Col>
+            </Row>
+        </Container>
         <hr className="mx-5"/>
       </div>
       <div id="related">
         <h1 className="w-100 text-center py-5">Related Groups and Projects</h1>
-
+        <Container>
+            <Row className="row-cols-xs-2 row-cols-lg-3">
+                <Col>
+                    <Image src={Placeholder} alt="Related Group Image" width="500px" />
+                </Col>
+                <Col>
+                    <Image src={Placeholder} alt="Related Group Image" width="500px" />
+                </Col>
+                <Col>
+                    <Image src={Placeholder} alt="Related Group Image" width="500px" />
+                </Col>
+                <Col>
+                    <Image src={Placeholder} alt="Related Group Image" width="500px" />
+                </Col>
+                <Col>
+                    <Image src={Placeholder} alt="Related Group Image" width="500px" />
+                </Col>
+                <Col>
+                    <Image src={Placeholder} alt="Related Group Image" width="500px" />
+                </Col>
+            </Row>
+        </Container>
       </div>
 
     </div>
