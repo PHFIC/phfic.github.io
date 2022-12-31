@@ -1,16 +1,54 @@
-import Title from '../components/title'
+// contact.jsx
+
 import {Container, Row, Col} from 'react-bootstrap'
+
+import Title from '../components/title'
+import WorkInProgress from '../components/work_in_progress'
+import QuadPane from '../components/quad_pane'
+import OverlayCard from '../components/overlay_card'
+
+import Placeholder from '../public/Placeholder.png'
+
 
 export default function Contact() {
   return (
-    <Container fluid style={{minHeight: "90vh"}}>{/* todo change minHeight for mobile view */}
+    <div style={{minHeight: "90vh"}}>
       <Title prefix="Contact" />
-      <Row className="row-cols-sm-2 row-cols-md-4">
-        <Col>phfic@mitre.org {/* TODO: @phfic.org email */}</Col>
-        <Col>Provide Feedback</Col>
-        <Col>Join PHFIC</Col>
-        <Col>Join CDC FHIR Community of Practice</Col>
-      </Row>
-    </Container>
+
+        <QuadPane
+            farLeft = {
+                <OverlayCard
+                    title="Email phfic@mitre.org"
+                    img={Placeholder}
+                    alt="Email Image"
+                />
+            }
+            midLeft = {
+                <OverlayCard
+                    title="Provide Feedback"
+                    img={Placeholder}
+                    alt="Feedback Image"
+
+                />
+            }
+            midRight = {
+                <OverlayCard
+                    title="Join PHFIC"
+                    img={Placeholder}
+                    alt="Join Collaborative Image"
+
+                />
+            }
+            farRight = {
+                <OverlayCard
+                    title="Join CDC FHIR Community of PRactice"
+                    img={Placeholder}
+                    alt="Join Community Image"
+
+                />
+            }
+        />
+
+    </div>
   )
 }
