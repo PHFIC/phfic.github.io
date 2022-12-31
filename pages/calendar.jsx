@@ -23,10 +23,10 @@ export default function Calendar() {
             <p>Please email <u className="text-blue">phfic@mitre.org</u> for Zoom link.</p>
           </Col>
           <Col sm={6} className="px-4 px-sm-5 py-4">
-            <ListGroup className="rounded shadow me-lg-5 me-md-3">
-              <ListGroup.Item variant="dark">Office Hours | <span className="text-end">Friday, Jan 13th 2022</span></ListGroup.Item>
-              <ListGroup.Item variant="dark">Steering Committee Meeting | <span className="text-end">TBA</span></ListGroup.Item>
-              <ListGroup.Item variant="dark">FHIR CDC Community of Practice | <span className="text-end">TBA</span></ListGroup.Item>
+            <ListGroup className="me-lg-5 me-md-3">
+              <ListGroup.Item variant="light">Office Hours | <span className="text-end">Friday, Jan 13th 2022</span></ListGroup.Item>
+              <ListGroup.Item variant="light">Steering Committee Meeting | <span className="text-end">TBA</span></ListGroup.Item>
+              <ListGroup.Item variant="light">FHIR CDC Community of Practice | <span className="text-end">TBA</span></ListGroup.Item>
             </ListGroup>
           </Col>
         </Row>
