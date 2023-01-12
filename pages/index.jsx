@@ -30,13 +30,14 @@ export default function Home() {
             <LandingLogo seo="PHFIC (Public Health FHIR® Implementation Collaborative)"
                          img={Logo}
                          alt="Public Health FHIR® Implementation Collaborative"
-                         tagline="Promoting Public Health Data Exchange for the Modern Age" />
+                         /* tagline="Promoting Public Health Data Exchange for the Modern Age" */
+                         tagline="Empowering Public Health with FHIR® through Community" />
           </Col>
           <Col md={4} className="d-flex align-items-center">
             <ButtonStack buttons={[
-                {key: "stackBtn1", path: "/playbook/TODO", color: "var(--bs-primary)", name: "What is FHIR?"},
-                {key: "stackBtn2", path: "/playbook/TODO", color: "var(--bs-blue)", name: "Starting FHIR-Ready Organizations"},
-                {key: "stackBtn3", path: "/playbook/TODO", color: "var(--bs-indigo)", name: "Implementing FHIR"}
+                {key: "stackBtn1", path: "/playbook/fhir-and-public-health#fhir-basics", color: "var(--bs-primary)", name: "What is FHIR?"},
+                {key: "stackBtn2", path: "/playbook/guidelines-for-creating-a-fhir-ready-organization", color: "var(--bs-blue)", name: "Starting FHIR-Ready Organizations"},
+                {key: "stackBtn3", path: "/playbook/implementing-fhir-use-cases", color: "var(--bs-indigo)", name: "Implementing FHIR"}
             ]}/>
           </Col>
         </Row>
@@ -125,7 +126,7 @@ export default function Home() {
             }
             right={
                 <LinkList id="engageLinks" links={[
-                    {href: "#TODO", text: "View our Calendar"},
+                    {href: "/calendar", text: "View our Calendar"},
                     {href: "#TODO", text: "Join PHFIC Community"},
                     {href: "#TODO", text: "Provide Feedback"}
                 ]} />
