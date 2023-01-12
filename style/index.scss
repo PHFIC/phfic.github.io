@@ -28,4 +28,11 @@ html,body {
     --bs-bg-opacity: 0.5;
     background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
   }
+
+}
+
+@include media-breakpoint-down(xl) {
+  .border-xs-xl-0 {
+    border-width: 0 !important;
+  }
 }

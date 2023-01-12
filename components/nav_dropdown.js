@@ -21,9 +21,9 @@ export default function NavDropdown(props) {
   }
 
   return (
-    <Dropdown as={NavItem} onMouseEnter={boldenText} onMouseLeave={normalizeText} className="max-width:95vw;">
+    <Dropdown as={NavItem} onMouseEnter={boldenText} onMouseLeave={normalizeText} style={{maxWidth: "95vw"}}>
       <Dropdown.Toggle as={NavLink} className={bold ? "text-dark fw-bold" : "text-dark"}>{props.title}</Dropdown.Toggle>
-      <Dropdown.Menu className="bg-secondary" variant="light" align="end">
+      <Dropdown.Menu className="bg-secondary mx-auto border-xs-xl-0" variant="light" align="end" style={{width: "max-content", maxWidth: "inherit"}}>
         {props.links.map(function(link, i) {
             return <Dropdown.Item as={NavLink} key={link.url} href={link.url}
                                   target={link.external ? '_blank' : '_self' }
