@@ -3,7 +3,7 @@
 export default function Footer() {
   return (
     <footer className="text-center bg-light pt-2 pb-5">
-      Copyright &copy; 2022 MITRE. All rights reserved.
+      Copyright &copy; {(new Date().getFullYear())} MITRE. All rights reserved.
       <br />
 
       Approved for public release. Distribution Unlimited. Case number 22-1062.

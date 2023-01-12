@@ -25,7 +25,7 @@ export default function SplitPane(props) {
           <h4 className="text-center text-md-end"><a href={props.path}>{props.subtext}</a></h4>
         </Col>
         <Col className="text-center d-none d-md-block">
-          <Image src={props.img} alt={props.alt} width={500} height="auto" className="m-5" />
+          <Image src={props.img} alt={props.alt} width={500} height="auto" className="m-xl-5" style={{maxWidth: "100%", objectFit: "contain"}} />
           {/* TODO scale image down responsively so it can remain mobile view */}
         </Col>
       </Row>

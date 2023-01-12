@@ -60,17 +60,28 @@ export default function About() {
         <Container>
             <Row className="row-cols-xs-1 row-cols-sm-2 row-cols-lg-4">
                 <Col>
-                    <Bio img={Placeholder} alt="..." text="Seth Folly, MD, MPH"/>
+                    <Bio img={Placeholder} alt="Dr. Seth's Photo"> Seth Folly, MD, MPH <br /> Co-Chair </Bio>
                 </Col>
                 <Col>
-                    <Bio img={Placeholder} alt="..." text="Kate Goodin, MPH, MS"/>
-
+                    <Bio img={Placeholder} alt="Kate's Photo"> Kate Goodin, MPH, MS</Bio>
                 </Col>
                 <Col>
-                    <Bio img={Placeholder} alt="..." text="Bryant Thomas, MD"/>
+                    <Bio img={Placeholder} alt="Dr. Bryant's Photo"> Bryant T Karras, MD <br /> Co-Chair</Bio>
                 </Col>
                 <Col>
-                    <Bio img={Placeholder} alt="..." text="Christine Stewart, MPH"/>
+                    <Bio img={Placeholder} alt="Christine's Photo"> Christine Stewart, MPH </Bio>
+                </Col>
+                <Col>
+                    <Bio img={Placeholder} alt="Generic Profile Photo"><i>To Be Announced</i></Bio>
+                </Col>
+                <Col>
+                    <Bio img={Placeholder} alt="Generic Profile Photo"><i>To Be Announced</i></Bio>
+                </Col>
+                <Col>
+                    <Bio img={Placeholder} alt="Generic Profile Photo"><i>To Be Announced</i></Bio>
+                </Col>
+                <Col>
+                    <Bio img={Placeholder} alt="Generic Profile Photo"><i>To Be Announced</i></Bio>
                 </Col>
             </Row>
         </Container>

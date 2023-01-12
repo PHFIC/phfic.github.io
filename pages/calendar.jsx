@@ -19,7 +19,7 @@ export default function Calendar() {
         <Row>
           <Col sm={6} className="text-center">
             <h2 className="">Next: Office Hours</h2>
-            <h3 className=""><Image src={CalendarDayImg} alt="Calendar" height={100} width={100} /></h3>
+            <h3 className=""><Image src={CalendarDayImg} alt="Calendar" height={250} width={250} /></h3>
             <p>Please email <u className="text-blue">phfic@mitre.org</u> for Zoom link.</p>
           </Col>
           <Col sm={6} className="px-4 px-sm-5 py-4">

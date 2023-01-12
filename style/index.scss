@@ -2,7 +2,7 @@
 
 /* override color palette */
 $primary: #e64c3c;   /* fire red */
-$secondary: #f7941d; /* orange */
+$secondary: #fac380; /* tan, original: #f7941d; orange */
 $dark: #414020;       /* soft black */
 $success: #63e653;   /* green */
 $info: #25dee6;      /* cyan */
@@ -27,5 +27,12 @@ html,body {
   .bg-xs-primary-opacity-50 {
     --bs-bg-opacity: 0.5;
     background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  }
+
+}
+
+@include media-breakpoint-down(xl) {
+  .border-xs-xl-0 {
+    border-width: 0 !important;
   }
 }

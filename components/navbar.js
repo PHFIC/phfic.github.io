@@ -38,9 +38,15 @@ export default function Navbar({ children }) {
 
   const quickLinks = [
     {url: "https://forms.office.com/g/LtdTUPcVem", name: "Request Advisory Service" + nearr, external: true},
-    {url: "/join", name: "Join PHFIC"}, /*TODO: join form*/
-    {url: "https://forms.office.com/g/TB5ddmfR5d", name: "Provide Feedback " + nearr, external: true}
-    /* TODO: playbbook links */
+    {url: "#TODO", name: "Join PHFIC"},
+    {url: "https://forms.office.com/g/TB5ddmfR5d", name: "Provide Feedback " + nearr, external: true},
+    {url: "https://www.healthit.gov/topic/standards-technology/standards/fhir-fact-sheets", name: "ONC FHIR Fact Sheets", external: true },
+    {url: "https://www.cdc.gov/nchs/nvss/modernization/pdf/fhir-implimentation-guidance-checklist.pdf", name: "CDC FHIR Checklist", external: true },
+    {url: "/playbook/appendix/resource-estimates", name: "Labour Resource Estimates" },
+    {url: "/playbook/appendix/five-ways-to-get-started-with-fhir", name: "Five Ways to get Started with FHIR" },
+    {url: "https://www.cdc.gov/surveillance/data-modernization/index.html", name: "CDC Data Modernization Initiative", external: true },
+    {url: "/playbook/appendix/examples-of-fhir-initiatives", name: "FHIR Initiatives" },
+    {url: "/about#related", name: "Related Organizations" }
   ]
 
   /* helper functions */
